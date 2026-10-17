@@ -39,10 +39,10 @@ Estas secciones podrán ajustarse de acuerdo con los datos disponibles y las pos
 Se seleccionaron tres plantillas gratuitas de HTML5 UP:
 
 - [ZeroFour](https://html5up.net/zerofour)
--[Plantilla Zerofour](images/Zerofour.png)
+-![Plantilla Zerofour](images/Zerofour.png)
 - [Alpha](https://html5up.net/alpha)
--[Plantilla Alpha](images/Alpha.png)
-- [Prologue](https://html5up.net/prologue)
+-![Plantilla Alpha](images/Alpha.png)
+- ![Prologue](https://html5up.net/prologue)
 -[Plantilla Prologue](images/Prologue.png)
 
 ### 2.2. Comparación de las plantillas
@@ -133,8 +133,14 @@ landing-page-arte-en-el-cerro/
 ├── README.md
 ├── index.html
 ├── LICENSE.txt
+├── left-sidebar.html
+├── no-sidebar.html
+├── right-sidebar.html
 ├── docs/
-├── css/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── webfonts/
 └── images/
 ```
 
