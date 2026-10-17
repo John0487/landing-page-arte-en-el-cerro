@@ -130,6 +130,7 @@ landing-page-arte-en-el-cerro/
 ├── README.md
 ├── index.html
 ├── LICENSE.txt
+├── docs/
 ├── css/
 └── images/
 ```
