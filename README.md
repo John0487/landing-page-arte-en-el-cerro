@@ -42,8 +42,8 @@ Se seleccionaron tres plantillas gratuitas de HTML5 UP:
 -![Plantilla Zerofour](images/Zerofour.png)
 - [Alpha](https://html5up.net/alpha)
 -![Plantilla Alpha](images/Alpha.png)
-- ![Prologue](https://html5up.net/prologue)
--[Plantilla Prologue](images/Prologue.png)
+- [Prologue](https://html5up.net/prologue)
+-![Plantilla Prologue](images/Prologue.png)
 
 ### 2.2. Comparación de las plantillas
 
