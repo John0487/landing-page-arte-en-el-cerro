@@ -68,7 +68,7 @@ Además, su diseño adaptable permite desarrollar una interfaz que pueda visuali
 
 Aunque Alpha ofrece una estructura apropiada para una landing page y Prologue facilita la navegación por una página única, el equipo considera que ZeroFour se ajusta mejor a la variedad de contenido que se desea presentar.
 
-### 2.4. Plan de trabajo del Sprint 1
+### 2.4. Plan de trabajo
 
 | Actividad | Resultado esperado |
 |---|---|
@@ -133,6 +133,7 @@ landing-page-arte-en-el-cerro/
 ├── README.md
 ├── index.html
 ├── LICENSE.txt
+├── docs/
 ├── css/
 └── images/
 ```
@@ -170,11 +171,11 @@ La primera versión funcional deberá cumplir con los siguientes criterios:
 
 El proyecto se alojará en un repositorio público de GitHub.
 
-**URL del repositorio:** [Agregar la URL del repositorio]
+**URL del repositorio:** https://github.com/John0487/landing-page-arte-en-el-cerro
 
 Como opción de publicación, se podrá configurar GitHub Pages para servir la página web.
 
-**URL de la landing page:** [Agregar la URL publicada cuando esté disponible]
+**URL de la landing page:** _________________
 
 Antes de entregar el proyecto, se comprobará que el repositorio sea accesible públicamente y que la página publicada, si corresponde, cargue correctamente sus estilos, imágenes y elementos de navegación.
 
@@ -195,8 +196,8 @@ GitHub Docs. (s. f.). *GitHub Pages*. https://docs.github.com/en/pages
 ---
 
 **Integrantes:**
-- [John Carreño]
-- [Geanpierre Desiderio]
+- John Carreño
+- Geanpierre Desiderio
 
 **Institución:** Escuela Superior Politécnica del Litoral (ESPOL)
 
