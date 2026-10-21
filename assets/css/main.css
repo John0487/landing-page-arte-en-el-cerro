@@ -2427,3 +2427,603 @@ input, select, textarea {
 			}
 
 	}
+
+	/* ===== Menú personalizado: Arte en el Cerro ===== */
+
+@media screen and (min-width: 981px) {
+
+    #header .inner {
+        height: auto;
+        min-height: 8em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        padding: 1em 1.5em;
+    }
+
+    #header h1 {
+        position: static;
+        flex: 0 0 110px;
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+
+    #nav {
+        position: static;
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        line-height: normal;
+    }
+
+    #nav > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav > ul > li {
+        float: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav > ul > li > a,
+    #nav > ul > li > span {
+        display: block;
+        padding: 10px 12px;
+        font-size: 0.82em;
+        line-height: 1.4;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+/* Pantallas medianas: conservar el menú móvil de ZeroFour */
+@media screen and (max-width: 980px) {
+    #header,
+    #nav {
+        display: none;
+    }
+}
+
+/* ===== Logotipo ESPOL ===== */
+
+#header h1 {
+    flex: 0 0 125px;
+}
+
+#header h1 a#logo {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.65em;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* Acento decorativo debajo de ESPOL */
+#header h1 a#logo::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 7px;
+    border-radius: 3px;
+    background: #4091bf;
+    transition: width 0.25s ease;
+}
+
+/* Efecto al pasar el cursor */
+#header h1 a#logo:hover {
+    color: #d9efff;
+    text-shadow: 0 0 10px rgba(64, 145, 191, 0.35);
+}
+
+#header h1 a#logo:hover::after {
+    width: 75px;
+}
+
+
+/* =========================================
+   HEADER WRAPPER Y FONDO DIFUMINADO
+   ========================================= */
+
+#header-wrapper {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 720px;
+    background: #1b4c92;
+}
+
+/* Fotografía de fondo */
+#header-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: -12px;
+
+    background-image: url("images/fondo_ESPOL.png");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+
+    filter: blur(5px);
+    transform: scale(1.03);
+}
+
+/* Capa oscura azulada */
+#header-wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    background: linear-gradient(
+        110deg,
+        rgba(5, 19, 39, 0.88) 0%,
+        rgba(13, 38, 68, 0.72) 55%,
+        rgba(8, 22, 40, 0.48) 100%
+    );
+}
+
+/* =========================================
+   ENCABEZADO TRANSLÚCIDO
+   ========================================= */
+
+#header {
+    position: relative;
+    z-index: 2;
+    background: rgba(8, 22, 42, 0.48);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#header .inner {
+    min-height: 100px;
+}
+
+/* Logotipo ESPOL */
+#header h1 a#logo {
+    color: #ffffff;
+    font-size: 1.65em;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#header h1 a#logo::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 7px;
+    border-radius: 3px;
+    background: #398fd0;
+}
+
+/* Enlaces del menú */
+#nav > ul > li > a {
+    color: #ffffff;
+    transition: color 0.25s ease;
+}
+
+#nav > ul > li > a:hover {
+    color: #8dccff;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL: INICIO
+   ========================================= */
+
+#inicio {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 620px;
+    padding: 70px 24px 90px;
+
+    color: #ffffff;
+    text-align: center;
+}
+
+#inicio .hero-content {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+#inicio h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+}
+
+#inicio h2 span {
+    color: #ffffff;
+}
+
+#inicio h3 {
+    margin: 0 0 24px;
+    color: #ffffff;
+    font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+#inicio p {
+    margin: 0 0 35px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15em;
+    line-height: 1.8;
+}
+
+/* Botón principal */
+#inicio .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 15px 28px;
+    border-radius: 35px;
+
+    background: #348ed0;
+    color: #ffffff;
+
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+#inicio .hero-button:hover {
+    background: #2275b5;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   ADAPTACIÓN A MÓVILES
+   ========================================= */
+
+@media screen and (max-width: 980px) {
+    #header-wrapper {
+        min-height: auto;
+    }
+
+    #inicio {
+        min-height: 560px;
+        padding: 70px 20px;
+    }
+
+    #inicio h2 {
+        font-size: clamp(2.8rem, 11vw, 4.5rem);
+    }
+
+    #inicio h3 {
+        letter-spacing: 0.06em;
+    }
+
+    #inicio p {
+        font-size: 1em;
+    }
+
+    #inicio .desktop-break {
+        display: none;
+    }
+}
+
+#sobre-el-evento {
+    position: relative;
+    z-index: 1;
+    background: #f5f7fa;
+    color: #17263d;
+    padding-top: 45px;
+}
+
+/* Sección Ubicación */
+
+.location-section {
+	padding: 5em 0;
+	background: #f5f7fa;
+	color: #17263d;
+}
+
+.location-section .major {
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+
+.location-section .major h2 {
+	color: #17263d
+}
+
+.location-content {
+	display: grid;
+	grid-template-columns: 0.8fr 1.5fr;
+	gap: 2em;
+	align-items: stretch;
+}
+
+.location-info {
+	padding: 2em;
+	background: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 5px 22px rgba(16, 36, 62, 0.08);
+}
+
+.location-info h3 {
+	color: #17263d;
+	margin-bottom: 1em;
+}
+
+.location-info p {
+	line-height: 1.8;
+}
+
+.location-button {
+	display: inline-block;
+	margin-top: 1em;
+	padding: 13px 20px;
+	border-radius: 30px;
+	background: #348ed0;
+	color: #ffffff !important;
+	text-decoration: none;
+	font-weight: 700;
+	transition: background 0.25s ease;
+}
+
+.location-button:hover {
+	background: #2275b5;
+}
+
+.location-map {
+	min-height: 180px;
+	overflow: hidden;
+	border-radius: 12px;
+	box-shadow: 0 5px 22px rgba(16, 36, 62, 0.12);
+}
+
+.location-map iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 380px;
+	border: 0;
+}
+
+/* Adaptación a móviles */
+@media screen and (max-width: 736px) {
+	.location-section {
+		padding: 3em 1em;
+	}
+
+	.location-content {
+		grid-template-columns: 1fr;
+	}
+
+	.location-map,
+	.location-map iframe {
+		min-height: 320px;
+	}
+}
+
+/* Sobre Arte en el Cerro */
+#sobre-el-evento {
+    padding: 5em 0;
+    background: #f5f7fa;
+    color: #243348;
+}
+
+#sobre-el-evento .major {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#sobre-el-evento .major h2 {
+    color: #10243e;
+    font-size: 2.4em;
+}
+
+#sobre-el-evento .major p {
+    color: #53657a;
+    font-size: 1.1em;
+}
+
+#sobre-el-evento .about-intro {
+    max-width: 900px;
+    margin: 0 auto 3em;
+    font-size: 1.05em;
+    line-height: 1.9;
+}
+
+#sobre-el-evento .about-intro p {
+    margin-bottom: 1.2em;
+}
+
+#sobre-el-evento .about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+#sobre-el-evento .about-card {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(16, 36, 62, 0.08);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+#sobre-el-evento .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(16, 36, 62, 0.14);
+}
+
+#sobre-el-evento .about-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#sobre-el-evento .about-card-content {
+    padding: 24px;
+}
+
+#sobre-el-evento .about-card h3 {
+    color: #163b62;
+    font-size: 1.25em;
+    margin-bottom: 12px;
+}
+
+#sobre-el-evento .about-card p {
+    color: #53657a;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+#sobre-el-evento .about-source {
+    margin-top: 2em;
+    font-size: 0.9em;
+    text-align: center;
+    color: #65758a;
+}
+
+#sobre-el-evento .about-source a {
+    color: #247db8;
+    font-weight: 700;
+}
+
+/* Tabletas y móviles */
+@media screen and (max-width: 980px) {
+    #sobre-el-evento .about-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #sobre-el-evento {
+        padding: 3em 1em;
+    }
+
+    #sobre-el-evento .major h2 {
+        font-size: 2em;
+    }
+
+    #sobre-el-evento .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #sobre-el-evento .about-card img {
+        height: 230px;
+    }
+}
+
+/* Información del evento */
+#informacion {
+    padding: 5em 0;
+    background: #f5f7fa;
+}
+
+#informacion .major {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.event-info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.event-info-card {
+    padding: 28px 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(16, 36, 62, 0.07);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.event-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(16, 36, 62, 0.12);
+}
+
+.event-info-card header {
+    margin-bottom: 18px;
+}
+
+.event-info-card header::before {
+    color: #245a91;
+    font-size: 2em;
+    margin-bottom: 14px;
+}
+
+.event-info-card h3 {
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+.event-info-card p {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+.event-info-action {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.event-info-action .button {
+    background: #245a91;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.event-info-action .button:hover {
+    background: #183e66;
+}
+
+@media screen and (max-width: 980px) {
+    .event-info-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #informacion {
+        padding: 3em 0;
+    }
+
+    .event-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .event-info-card {
+        padding: 24px 20px;
+    }
+}
