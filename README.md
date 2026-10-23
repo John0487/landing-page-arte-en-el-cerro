@@ -4,25 +4,38 @@
 
 ### 1.1. Contexto del proyecto
 
-Arte en el Cerro es un evento cultural de acceso libre que presenta agrupaciones artísticas y busca fortalecer la conexión entre la comunidad politécnica y la ciudad.
+Arte en el Cerro es una iniciativa cultural de acceso libre
+que busca fortalecer la relación entre el arte, la comunidad
+politécnica y la ciudad de Guayaquil.
 
-El objetivo de este proyecto es desarrollar una primera versión funcional de una landing page que centralice la información del evento y permita presentar su propósito, programación artística, ubicación y otros datos relevantes mediante una interfaz organizada y adaptable.
+La edición del 2 de octubre de 2026 contó con la participación
+del Coro ESPOL, el Grupo de Teatro ESPOL y la invitada especial
+Elena Erazo. Aunque inicialmente estaba prevista en un espacio
+al aire libre, debido a la lluvia la actividad se desarrolló
+en el Aula Magna de ESPOL Campus Las Peñas.
 
-La información recopilada durante el levantamiento de datos servirá como base para definir el contenido del sitio. Se evitará publicar información que no haya sido confirmada por los organizadores.
+Como parte del proyecto académico, se desarrolló una landing
+page basada en la plantilla ZeroFour de HTML5 UP. La página
+reúne información del evento, programación artística,
+fotografías, contenido audiovisual, ubicación y enlaces
+institucionales, mediante una interfaz personalizada,
+interactiva y adaptable a diferentes dispositivos.
 
 ### 1.2. Organización del contenido
 
-| Sección | Propósito | Datos que se presentarán |
+| Sección | Propósito | Contenido implementado |
 |---|---|---|
-| Inicio | Presentar el evento de forma inmediata. | Nombre, descripción breve e imagen representativa. |
-| Sobre el evento | Explicar su propósito cultural. | Descripción, acceso libre e importancia para la comunidad. |
-| Programación artística | Presentar las actividades culturales. | Agrupaciones, descripciones y horarios confirmados. |
-| Galería | Mostrar el componente visual del evento. | Fotografías autorizadas de artistas, presentaciones y espacios. |
-| Información del evento | Facilitar la consulta de datos prácticos. | Fecha, horario, ubicación y novedades confirmadas. |
-| Ubicación | Ayudar a identificar el lugar de realización. | Nombre del espacio, campus y referencia de ubicación. |
-| Contacto y redes sociales | Facilitar el acceso a canales oficiales. | Enlaces a redes sociales y medios de contacto disponibles. |
+| Inicio | Presentar la identidad del evento. | Logotipo, fotografía del Cerro del Carmen y presentación general. |
+| Sobre el evento | Explicar el propósito cultural. | Contexto, fotografía real, información y animación de texto al desplazarse. |
+| Programación artística | Presentar a los participantes. | Coro ESPOL, Grupo de Teatro ESPOL y Elena Erazo, con fotografías y descripciones. |
+| Galería | Mostrar los momentos del evento. | Galería interactiva de fotografías y Reel de Instagram. |
+| Información | Comunicar los datos prácticos. | Fecha, hora anunciada, acceso libre y sede, con efecto de profundidad. |
+| Ubicación | Identificar el espacio del encuentro. | Aula Magna, referencia de dirección, mapa de Google y enlace para consultar la ubicación. |
+| Contacto y redes | Facilitar el acceso a canales institucionales. | Enlaces a Instagram, Facebook y ESPOL Cultural. |
 
-Estas secciones podrán ajustarse de acuerdo con los datos disponibles y las posibilidades de la plantilla seleccionada.
+La estructura implementada responde a los objetivos del
+proyecto y permite actualizar posteriormente las fotografías
+y otros contenidos autorizados por los organizadores.
 
 ### 1.3. Necesidades identificadas
 
@@ -38,12 +51,17 @@ Estas secciones podrán ajustarse de acuerdo con los datos disponibles y las pos
 
 Se seleccionaron tres plantillas gratuitas de HTML5 UP:
 
-- [ZeroFour](https://html5up.net/zerofour)
--![Plantilla Zerofour](images/Zerofour.png)
-- [Alpha](https://html5up.net/alpha)
--![Plantilla Alpha](images/Alpha.png)
-- [Prologue](https://html5up.net/prologue)
--![Plantilla Prologue](images/Prologue.png)
+- **ZeroFour**
+
+  ![Plantilla ZeroFour](images/Zerofour.png)
+
+- **Alpha**
+
+  ![Plantilla Alpha](images/Alpha.png)
+
+- **Prologue**
+
+  ![Plantilla Prologue](images/Prologue.png)
 
 ### 2.2. Comparación de las plantillas
 
@@ -173,17 +191,81 @@ La primera versión funcional deberá cumplir con los siguientes criterios:
 - La página se visualiza adecuadamente en diferentes tamaños de pantalla.
 - El repositorio contiene los archivos necesarios para visualizar la página.
 
+
+### 4.5. Personalización e interactividad
+
+La landing page fue desarrollada a partir de ZeroFour de
+HTML5 UP, conservando su estructura responsive y adaptando
+la apariencia a la identidad visual de Arte en el Cerro.
+
+Entre las principales personalizaciones se encuentran:
+
+- **Identidad visual:** incorporación de logotipos,
+  fotografías del evento y una paleta basada en azul
+  oscuro, azul institucional y ámbar.
+
+- **Portada interactiva:** efecto de iluminación que
+  responde al movimiento del cursor.
+
+- **Sobre el evento:** composición editorial con fotografía
+  real, franja tipográfica animada y efecto Focus Text
+  controlado mediante el desplazamiento de la página.
+
+- **Programación artística:** presentación editorial
+  de los tres participantes con fotografías, títulos
+  y descripciones.
+
+- **Galería fotográfica:** paneles expandibles tipo
+  Accordion que responden al mouse, teclado y toque.
+
+- **Contenido audiovisual:** integración de una
+  publicación de Instagram mediante el reproductor
+  oficial de la plataforma.
+
+- **Información del evento:** composición con fecha
+  destacada y efecto de profundidad interactivo.
+
+- **Ubicación:** integración de Google Maps y
+  elementos decorativos inspirados en líneas topográficas.
+
+- **Contacto y redes:** enlaces institucionales con
+  transiciones visuales y navegación de pie de página.
+
+Las interacciones personalizadas se desarrollaron con
+HTML, CSS y JavaScript, sin necesidad de migrar el
+proyecto a React.
+
+### 4.6. Consideraciones de accesibilidad
+
+Durante la implementación se consideraron aspectos como
+el uso de HTML semántico, descripciones alternativas
+para las imágenes, navegación mediante enlaces internos
+y controles accesibles para la galería interactiva.
+
+Los efectos de movimiento personalizados consideran
+la preferencia del usuario por movimiento reducido.
+
+El diseño incorpora reglas responsive para adaptar
+la distribución del contenido a pantallas de
+computadoras, tabletas y dispositivos móviles.
+
 ## 5. Despliegue
 
-El proyecto se alojará en un repositorio público de GitHub.
+El código fuente del proyecto se administra mediante Git
+y se aloja en el repositorio de GitHub:
 
-**URL del repositorio:** https://github.com/John0487/landing-page-arte-en-el-cerro
+**Repositorio:**
+https://github.com/John0487/landing-page-arte-en-el-cerro
 
-Como opción de publicación, se podrá configurar GitHub Pages para servir la página web.
+La landing page está preparada para su publicación
+mediante GitHub Pages.
 
-**URL de la landing page:** _________________
+**Estado del despliegue:** pendiente de publicación.
 
-Antes de entregar el proyecto, se comprobará que el repositorio sea accesible públicamente y que la página publicada, si corresponde, cargue correctamente sus estilos, imágenes y elementos de navegación.
+Una vez desplegada, se verificará el funcionamiento
+de los enlaces, fotografías, estilos, scripts,
+mapa de ubicación y contenido de Instagram
+desde la URL pública.
 
 ## 6. Bibliografía
 
