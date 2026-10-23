@@ -349,73 +349,86 @@
                 </section>
             </div>
         </div>
-        <div class="wrapper style1">
+        <div class="wrapper style1 gallery-wrapper">
             <div class="inner">
-                <!-- Galería -->
-                <section id="galeria" class="container">
-
-                    <header class="major">
-                        <h2>Galería del evento</h2>
+                <!-- Galería interactiva -->
+                <section id="galeria" class="container"
+                        aria-labelledby="titulo-galeria">
+                    <header class="galeria-heading">
+                        <p class="galeria-kicker">
+                            ✦ RECUERDOS DEL 02 DE OCTUBRE
+                        </p>
+                        <h2 id="titulo-galeria">
+                            El arte en <em>imágenes.</em>
+                        </h2>
                         <p>
-                            Revive los momentos artísticos de
-                            Arte en el Cerro, realizado el
-                            2 de octubre de 2026.
+                            Tres miradas a una jornada de música,
+                            teatro y comunidad en el Aula Magna
+                            de ESPOL.
                         </p>
                     </header>
-
-                    <div class="row">
-
+                    <div class="galeria-accordion"
+                        role="group"
+                        aria-label="Fotografías de Arte en el Cerro">
                         <!-- Coro ESPOL -->
-                        <div class="col-4 col-12-medium">
-                            <figure class="image featured galeria-card">
-                                <img
-                                    src="images/coro-espol.jpeg"
-                                    alt="Presentación del Coro ESPOL"
-                                    loading="lazy"
-                                >
-                                <figcaption>
-                                    <h3>Coro ESPOL</h3>
-                                    <p>Expresión musical y talento coral.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <!-- Grupo de Teatro ESPOL -->
-                        <div class="col-4 col-12-medium">
-                            <figure class="image featured galeria-card">
-                                <img
-                                    src="images/teatro-espol.jpeg"
-                                    alt="Presentación del Grupo de Teatro ESPOL"
-                                    loading="lazy"
-                                >
-                                <figcaption>
-                                    <h3>Grupo de Teatro ESPOL</h3>
-                                    <p>Creatividad y expresión escénica.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-
+                        <button type="button"
+                                class="galeria-panel is-active"
+                                aria-pressed="true">
+                            <img src="images/coro-espol.jpeg"
+                                alt="Presentación del Coro ESPOL"
+                                loading="lazy">
+                            <span class="galeria-panel-text">
+                                <span class="galeria-panel-index">
+                                    01 / MÚSICA CORAL
+                                </span>
+                                <strong>Coro ESPOL</strong>
+                                <span class="galeria-panel-description">
+                                    Voces que unen a la comunidad.
+                                </span>
+                            </span>
+                        </button>
+                        <!-- Teatro ESPOL -->
+                        <button type="button"
+                                class="galeria-panel"
+                                aria-pressed="false">
+                            <img src="images/teatro-espol.jpeg"
+                                alt="Presentación del Grupo de Teatro ESPOL"
+                                loading="lazy">
+                            <span class="galeria-panel-text">
+                                <span class="galeria-panel-index">
+                                    02 / ARTES ESCÉNICAS
+                                </span>
+                                <strong>Grupo de Teatro ESPOL</strong>
+                                <span class="galeria-panel-description">
+                                    Historias compartidas en escena.
+                                </span>
+                            </span>
+                        </button>
                         <!-- Elena Erazo -->
-                        <div class="col-4 col-12-medium">
-                            <figure class="image featured galeria-card">
-                                <img
-                                    src="images/elena-erazo.jpeg"
-                                    alt="Participación especial de Elena Erazo"
-                                    loading="lazy"
-                                >
-                                <figcaption>
-                                    <h3>Elena Erazo</h3>
-                                    <p>Invitada especial del evento.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-
+                        <button type="button"
+                                class="galeria-panel"
+                                aria-pressed="false">
+                            <img src="images/elena-erazo.jpeg"
+                                alt="Participación especial de Elena Erazo"
+                                loading="lazy">
+                            <span class="galeria-panel-text">
+                                <span class="galeria-panel-index">
+                                    03 / INVITADA ESPECIAL
+                                </span>
+                                <strong>Elena Erazo</strong>
+                                <span class="galeria-panel-description">
+                                    Una participación especial.
+                                </span>
+                            </span>
+                        </button>
                     </div>
-
+                    <p class="galeria-ayuda">
+                        Selecciona una fotografía para descubrir
+                        cada momento del evento.
+                    </p>
                 </section>
             </div>
         </div>
-
         <div class="wrapper style3">
             <div class="inner">
                 <!-- Información del evento -->
@@ -428,7 +441,6 @@
                                 de Arte en el Cerro.
                             </p>
                         </header>
-
                         <div class="event-info-cards">
                             <article class="event-info-card">
                                 <header class="second icon solid fa-calendar-alt">
@@ -443,7 +455,6 @@
                                     <time datetime="17:00">17:00</time>.
                                 </p>
                             </article>
-
                             <article class="event-info-card">
                                 <header class="second icon solid fa-map-marker-alt">
                                     <h3>Lugar</h3>
@@ -453,7 +464,6 @@
                                     ubicada en el Campus Las Peñas, en Guayaquil, Ecuador.
                                 </p>
                             </article>
-
                             <article class="event-info-card">
                                 <header class="second icon solid fa-ticket-alt">
                                     <h3>Acceso libre</h3>
@@ -466,7 +476,6 @@
                                 </p>
                             </article>
                         </div>
-
                         <div class="event-info-action">
                             <a
                                 href="https://www.espol.edu.ec/es/noticias/espol-y-segura-ep-llevan-la-cultura-y-espacios-de-encuentro-al-cerro-del-carmen"
@@ -478,7 +487,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- Ubicación -->
                 <section id="ubicacion" class="location-section">
                     <div class="inner">
@@ -490,7 +498,6 @@
                                 Arte en el Cerro el 2 de octubre de 2026.
                             </p>
                         </header>
-
                         <div class="location-content">
                             <div class="location-info">
                                 <h3>Aula Magna - ESPOL</h3>
@@ -566,5 +573,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/hero-interactivo.js"></script>
+<script src="assets/js/galeria.js"></script>
 </body>
 </html>
