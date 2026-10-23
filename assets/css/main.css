@@ -3027,3 +3027,110 @@ input, select, textarea {
         padding: 24px 20px;
     }
 }
+
+/* =========================================
+   PROGRAMACIÓN ARTÍSTICA
+   Arte en el Cerro
+   ========================================= */
+
+#programacion {
+	padding: 1em 0;
+	text-align: center;
+}
+
+/* Encabezado */
+#programacion .major {
+	border-bottom: none;
+	margin-bottom: 3em;
+}
+
+#programacion .major::after {
+	display: none;
+}
+
+#programacion .major h2 {
+	color: #10243e;
+	font-size: 2.4em;
+	margin-bottom: 0.8em;
+}
+
+#programacion .major p {
+	color: #53657a;
+	font-size: 1.1em;
+	line-height: 1.8;
+	max-width: 750px;
+	margin: 0 auto;
+	position: static;
+}
+
+/* Distribución de tarjetas */
+#programacion .row {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	margin: 0;
+}
+
+#programacion .row > div {
+	width: auto;
+	min-width: 0;
+	padding: 0;
+}
+
+/* Tarjetas de artistas */
+#programacion .programacion-card {
+	height: 100%;
+	padding: 32px 26px;
+	background: #ffffff;
+	border: 1px solid #dce7f3;
+	border-top: 4px solid #348ed0;
+	border-radius: 14px;
+	box-shadow: 0 6px 24px rgba(16, 36, 62, 0.08);
+	text-align: left;
+
+	transition: transform 0.25s ease,
+				box-shadow 0.25s ease;
+}
+
+/* Efecto visual */
+#programacion .programacion-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 30px rgba(16, 36, 62, 0.14);
+}
+
+/* Nombres de participantes */
+#programacion .programacion-card h3 {
+	color: #163b62;
+	font-size: 1.25em;
+	line-height: 1.5;
+	margin: 0 0 16px;
+}
+
+/* Descripciones */
+#programacion .programacion-card p {
+	color: #53657a;
+	font-size: 1em;
+	line-height: 1.8;
+	margin-bottom: 0;
+}
+
+/* Adaptación a tablets y celulares */
+@media screen and (max-width: 980px) {
+	#programacion .row {
+		grid-template-columns: 1fr;
+	}
+
+	#programacion .major h2 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#programacion {
+		padding: 1em;
+	}
+
+	#programacion .programacion-card {
+		padding: 26px 22px;
+	}
+}
