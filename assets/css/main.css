@@ -3242,3 +3242,115 @@ input, select, textarea {
         height: 300px;
     }
 }
+
+
+/* =========================================
+   REDISEÑO GLOBAL - ARTE EN EL CERRO
+   Encabezado y espaciados
+   ========================================= */
+
+:root {
+    --color-oscuro: #101b30;
+    --color-azul: #285b87;
+    --color-acento: #f3a73d;
+    --color-claro: #f7f4ef;
+    --color-texto: #243348;
+}
+
+/* Márgenes generales */
+#main-wrapper > .wrapper > .inner,
+#footer-wrapper #footer {
+    width: min(1180px, calc(100% - 64px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-wrapper .container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Menú de escritorio */
+@media screen and (min-width: 981px) {
+
+    #header {
+        width: min(1320px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 16px;
+    }
+
+    #header .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 86px;
+        height: auto;
+        gap: 20px;
+        padding: 14px 22px;
+    }
+
+    #header h1 {
+        position: static;
+        flex: 0 0 auto;
+        margin: 0;
+        font-size: 1.15rem;
+    }
+
+    #header h1 a#logo {
+        font-size: 1.25rem;
+        white-space: nowrap;
+    }
+
+    #nav {
+        position: static;
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        line-height: normal;
+    }
+
+    #nav > ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav > ul > li {
+        float: none;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    #nav > ul > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        transition: color 0.25s ease;
+    }
+
+    #nav > ul > li > a:hover {
+        color: var(--color-acento);
+    }
+}
+
+/* Márgenes en celulares */
+@media screen and (max-width: 736px) {
+
+    #main-wrapper > .wrapper > .inner,
+    #footer-wrapper #footer {
+        width: calc(100% - 36px);
+    }
+
+    #main-wrapper .wrapper {
+        padding: 3rem 0;
+    }
+}
