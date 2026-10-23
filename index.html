@@ -486,59 +486,88 @@
         <div class="wrapper style3">
             <div class="inner">
                 <!-- Información del evento -->
-                <section id="informacion">
-                    <div class="inner">
-                        <header class="major">
-                            <h2>Información del evento</h2>
-                            <p>
-                                Todo lo que necesitas saber para disfrutar
-                                de Arte en el Cerro.
+                <section id="informacion" aria-labelledby="titulo-informacion">
+                    <header class="info-heading">
+                        <p class="info-eyebrow">
+                            ✦ INFORMACIÓN DEL EVENTO
+                        </p>
+                        <h2 id="titulo-informacion">
+                            Una tarde para <em>recordar.</em>
+                        </h2>
+                        <p>
+                            Los detalles de una jornada de arte,
+                            cultura y comunidad.
+                        </p>
+                    </header>
+                    <div class="info-layout">
+                        <!-- Fecha con efecto de profundidad -->
+                         <div class="info-date" aria-label="2 de octubre de 2026">
+                            <div class="info-date-number" aria-hidden="true">
+                                <span class="info-depth-back">
+                                    02
+                                </span>
+                                <span class="info-depth-middle">
+                                    02
+                                </span>
+                                <span class="info-depth-front">
+                                    02
+                                </span>
+                            </div>
+                            <p class="info-date-month">
+                                OCT <span>2026</span>
                             </p>
-                        </header>
-                        <div class="event-info-cards">
-                            <article class="event-info-card">
-                                <header class="second icon solid fa-calendar-alt">
-                                    <h3>Fecha del evento</h3>
-                                </header>
-                                <p>
-                                    Arte en el cerro se realizó el
-                                    <time datetime="2026-10-02">
-                                        2 de octubre de 2026
-                                    </time>.
-                                    La convocatoria fue anunciada para las
-                                    <time datetime="17:00">17:00</time>.
-                                </p>
-                            </article>
-                            <article class="event-info-card">
-                                <header class="second icon solid fa-map-marker-alt">
-                                    <h3>Lugar</h3>
-                                </header>
-                                <p>
-                                    El evento se realizó en el Aula Magna de la ESPOL,
-                                    ubicada en el Campus Las Peñas, en Guayaquil, Ecuador.
-                                </p>
-                            </article>
-                            <article class="event-info-card">
-                                <header class="second icon solid fa-ticket-alt">
-                                    <h3>Acceso libre</h3>
-                                </header>
-                                <p>
-                                    Arte en el cerro fue un evento cultural
-                                    de acceso totalmente gratuito,
-                                    abierto a la comunidad para disfrutar
-                                    de las expresiones artísticas.
-                                </p>
-                            </article>
                         </div>
-                        <div class="event-info-action">
-                            <a
-                                href="https://www.espol.edu.ec/es/noticias/espol-y-segura-ep-llevan-la-cultura-y-espacios-de-encuentro-al-cerro-del-carmen"
-                                class="button"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Conocer más sobre el evento
-                            </a>
+                        <!-- Detalles del evento -->
+                        <div class="info-details">
+                            <div class="info-detail">
+                                <span class="info-label">
+                                    01 / CONVOCATORIA
+                                </span>
+
+                                <p class="info-value">
+                                    <time datetime="2026-10-02T17:00">
+                                        17:00
+                                    </time>
+                                </p>
+                                <p class="info-description">
+                                    Hora anunciada para la actividad.
+                                </p>
+                            </div>
+                            <div class="info-detail">
+                                <span class="info-label">
+                                    02 / ENTRADA
+                                </span>
+                                <p class="info-value">
+                                    Acceso libre
+                                </p>
+                                <p class="info-description">
+                                    Un encuentro cultural gratuito
+                                    y abierto a la comunidad.
+                                </p>
+                            </div>
+                            <div class="info-detail">
+                                <span class="info-label">
+                                    03 / ESCENARIO
+                                </span>
+                                <p class="info-value">
+                                    Aula Magna
+                                </p>
+                                <p class="info-description">
+                                    ESPOL Campus Las Peñas,
+                                    Guayaquil, Ecuador.
+                                </p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="info-footer">
+                        <p>
+                            Música, teatro y comunidad
+                            en una misma jornada.
+                        </p>
+                        <a href="#ubicacion" class="info-link">
+                            Explorar ubicación
+                            <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
                 </section>
                 <!-- Ubicación -->
@@ -628,6 +657,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/hero-interactivo.js"></script>
 <script src="assets/js/galeria.js"></script>
+<script src="assets/js/informacion-interactiva.js"></script>
 <!-- Reproductor de Instagram -->
 <script async src="https://www.instagram.com/embed.js"></script>
 </body>
