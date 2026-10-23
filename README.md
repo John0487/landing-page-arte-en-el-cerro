@@ -257,15 +257,15 @@ y se aloja en el repositorio de GitHub:
 **Repositorio:**
 https://github.com/John0487/landing-page-arte-en-el-cerro
 
-La landing page está preparada para su publicación
-mediante GitHub Pages.
+**Estado del despliegue:** Publicado mediante GitHub Pages.
 
-**Estado del despliegue:** pendiente de publicación.
+**URL de la landing page:**
+https://john0487.github.io/landing-page-arte-en-el-cerro/
 
-Una vez desplegada, se verificará el funcionamiento
-de los enlaces, fotografías, estilos, scripts,
-mapa de ubicación y contenido de Instagram
-desde la URL pública.
+La página se encuentra disponible públicamente y
+presenta la información del evento, programación
+artística, galería interactiva, contenido audiovisual,
+ubicación y enlaces institucionales.
 
 ## 6. Bibliografía
 
