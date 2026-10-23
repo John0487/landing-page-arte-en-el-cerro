@@ -2428,77 +2428,7 @@ input, select, textarea {
 
 	}
 
-	/* ===== Menú personalizado: Arte en el Cerro ===== */
-
-@media screen and (min-width: 981px) {
-
-    #header .inner {
-        height: auto;
-        min-height: 8em;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1em;
-        padding: 1em 1.5em;
-    }
-
-    #header h1 {
-        position: static;
-        flex: 0 0 110px;
-        margin: 0;
-        font-size: 1.5em;
-        line-height: 1.2;
-    }
-
-    #nav {
-        position: static;
-        flex: 1;
-        width: auto;
-        min-width: 0;
-        line-height: normal;
-    }
-
-    #nav > ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 6px 10px;
-        margin: 0;
-        padding: 0;
-    }
-
-    #nav > ul > li {
-        float: none;
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
-    #nav > ul > li > a,
-    #nav > ul > li > span {
-        display: block;
-        padding: 10px 12px;
-        font-size: 0.82em;
-        line-height: 1.4;
-        text-align: center;
-        white-space: nowrap;
-    }
-}
-
-/* Pantallas medianas: conservar el menú móvil de ZeroFour */
-@media screen and (max-width: 980px) {
-    #header,
-    #nav {
-        display: none;
-    }
-}
-
 /* ===== Logotipo ESPOL ===== */
-
-#header h1 {
-    flex: 0 0 125px;
-}
 
 #header h1 a#logo {
     display: inline-block;
@@ -2517,10 +2447,10 @@ input, select, textarea {
     content: "";
     display: block;
     width: 48px;
-    height: 3px;
+    height: 4px;
     margin-top: 7px;
     border-radius: 3px;
-    background: #4091bf;
+    background: #398fd0;
     transition: width 0.25s ease;
 }
 
@@ -2547,20 +2477,22 @@ input, select, textarea {
     background: #1b4c92;
 }
 
-/* Fotografía de fondo */
+
+/* Fotografía principal del Cerro del Carmen */
 #header-wrapper::before {
     content: "";
     position: absolute;
     z-index: -2;
-    inset: -12px;
+    inset: -15px;
 
-    background-image: url("images/fondo_ESPOL.png");
+    background-image:
+        url("../../images/cerro-del-carmen.jpg");
     background-size: cover;
     background-position: center 45%;
     background-repeat: no-repeat;
 
-    filter: blur(5px);
-    transform: scale(1.03);
+    filter: blur(4px);
+    transform: scale(1.035);
 }
 
 /* Capa oscura azulada */
@@ -2587,29 +2519,6 @@ input, select, textarea {
     z-index: 2;
     background: rgba(8, 22, 42, 0.48);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-#header .inner {
-    min-height: 100px;
-}
-
-/* Logotipo ESPOL */
-#header h1 a#logo {
-    color: #ffffff;
-    font-size: 1.65em;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-#header h1 a#logo::after {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 4px;
-    margin-top: 7px;
-    border-radius: 3px;
-    background: #398fd0;
 }
 
 /* Enlaces del menú */
@@ -2642,6 +2551,8 @@ input, select, textarea {
 }
 
 #inicio .hero-content {
+	position: relative;
+	z-index: 1;
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
@@ -2655,10 +2566,6 @@ input, select, textarea {
     line-height: 1.1;
     letter-spacing: -0.04em;
     text-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
-}
-
-#inicio h2 span {
-    color: #ffffff;
 }
 
 #inicio h3 {
@@ -2731,14 +2638,6 @@ input, select, textarea {
     #inicio .desktop-break {
         display: none;
     }
-}
-
-#sobre-el-evento {
-    position: relative;
-    z-index: 1;
-    background: #f5f7fa;
-    color: #17263d;
-    padding-top: 45px;
 }
 
 /* Sección Ubicación */
@@ -3274,7 +3173,7 @@ input, select, textarea {
 @media screen and (min-width: 981px) {
 
     #header {
-        width: min(1320px, calc(100% - 36px));
+        width: min(1380px, calc(100% - 36px));
         margin: 0 auto;
         padding: 0;
         border-radius: 16px;
@@ -3329,8 +3228,8 @@ input, select, textarea {
     #nav > ul > li > a {
         position: relative;
         display: block;
-        padding: 10px 8px;
-        font-size: 0.78rem;
+        padding: 10px 7px;
+        font-size: 0.74rem;
         font-weight: 700;
         letter-spacing: 0.02em;
         white-space: nowrap;
@@ -3352,5 +3251,124 @@ input, select, textarea {
 
     #main-wrapper .wrapper {
         padding: 3rem 0;
+    }
+}
+
+
+/* =========================================
+   HERO INTERACTIVO
+   ========================================= */
+
+#inicio .credito-hero {
+    position: absolute;
+    z-index: 2;
+    right: 18px;
+    bottom: 12px;
+    margin: 0;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: right;
+}
+
+#inicio .credito-hero a {
+    color: inherit;
+}
+
+
+/* Resplandor interactivo mejorado */
+
+#header-wrapper .hero-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse 360px 300px at
+        var(--cursor-x, 50%)
+        var(--cursor-y, 50%),
+        rgba(243, 167, 61, 0.22) 0%,
+        rgba(52, 142, 208, 0.10) 45%,
+        transparent 75%
+    );
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 65%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 65%,
+        transparent 100%
+    );
+}
+
+#header-wrapper.glow-active .hero-glow {
+    opacity: 1;
+}
+
+@media (hover: none),
+       (prefers-reduced-motion: reduce) {
+    #header-wrapper .hero-glow {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   LOGO PRINCIPAL - HERO
+   ========================================= */
+
+/* Contenedor del logo */
+#inicio h2.hero-marca {
+    display: block;
+    width: min(780px, 100%);
+    max-width: 100%;
+    margin: 0 auto 1.8rem;
+    padding: 0;
+
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-shadow: none;
+}
+
+/* Imagen del logo */
+#inicio .hero-marca .logo-evento {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 12px 18px rgba(0, 0, 0, 0.25)
+    );
+}
+
+/* Ajustes para tablets */
+@media screen and (max-width: 980px) {
+    #inicio h2.hero-marca {
+        width: min(650px, 94%);
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Ajustes para celulares */
+@media screen and (max-width: 736px) {
+    #inicio h2.hero-marca {
+        width: 96%;
+        margin-bottom: 1.25rem;
     }
 }
