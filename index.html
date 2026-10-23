@@ -10,6 +10,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Conoce Arte en el Cerro, un evento cultural que reúne expresiones artísticas y a la comunidad." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="homepage is-preload">
@@ -84,103 +87,106 @@
 
     <!-- Contenido principal -->
     <div id="main-wrapper">
-        <div class="wrapper style1">
+        <div class="wrapper style1 about-wrapper">
             <div class="inner">
                 <!-- Sobre el evento -->
-                 <section id="sobre-el-evento">
-                    <div class="inner">
-                        <header class="major">
-                            <h2>Sobre Arte en el Cerro</h2>
-                            <p>
-                                El arte como punto de encuentro para transformar
-                                espacios y fortalecer la comunidad.
-                            </p>
-                        </header>
+                <section id="sobre-el-evento"
+                        aria-labelledby="titulo-sobre-evento">
 
-                        <div class="about-intro">
-                            <p>
-                                <strong>Arte en el Cerro</strong> es una iniciativa
-                                impulsada por la ESPOL en colaboración con Segura EP
-                                y los habitantes del Cerro del Carmen, en Guayaquil.
-                                Su objetivo es acercar las expresiones artísticas a
-                                la comunidad, fomentar la convivencia y promover
-                                la apropiación de los espacios públicos a través
-                                de la cultura.
-                            </p>
+                    <div class="about-layout">
 
-                            <p>
-                                Mediante presentaciones artísticas y actividades
-                                culturales, el proyecto busca crear oportunidades
-                                de encuentro entre la comunidad universitaria y
-                                los habitantes del sector.
-                            </p>
+                        <!-- Fotografía del evento -->
+                        <div class="about-visual">
+                            <figure class="about-photo">
+                                <img
+                                    src="images/coro-espol.jpeg"
+                                    alt="Presentación del Coro ESPOL durante Arte en el Cerro"
+                                    loading="lazy"
+                                >
+
+                                <figcaption>
+                                    02 OCT 2026
+                                    <span>Aula Magna · ESPOL Las Peñas</span>
+                                </figcaption>
+                            </figure>
+
+                            <span class="about-stamp" aria-hidden="true">
+                                ARTE · CULTURA · COMUNIDAD
+                            </span>
                         </div>
 
-                        <div class="about-cards">
-                            <article class="about-card">
-                                <img
-                                    src="images/pic01.jpg"
-                                    alt="Presentación artística"
-                                >
-                                <div class="about-card-content">
-                                    <header class="second icon solid fa-music">
-                                        <h3>Cultura para todos</h3>
-                                    </header>
-                                    <p>
-                                        La música, la danza y el teatro acercan
-                                        distintas expresiones artísticas a los
-                                        espacios comunitarios.
-                                    </p>
-                                </div>
-                            </article>
+                        <!-- Información principal -->
+                        <div class="about-copy">
 
-                            <article class="about-card">
-                                <img
-                                    src="images/pic02.jpg"
-                                    alt="Encuentro entre artistas y comunidad"
-                                >
-                                <div class="about-card-content">
-                                    <header class="second icon solid fa-users">
-                                        <h3>Comunidad y convivencia</h3>
-                                    </header>
-                                    <p>
-                                        El proyecto promueve el encuentro ciudadano,
-                                        la participación y el uso positivo de los
-                                        espacios públicos.
-                                    </p>
-                                </div>
-                            </article>
+                            <p class="about-eyebrow">
+                                <span aria-hidden="true">✦</span>
+                                SOBRE EL EVENTO
+                            </p>
 
-                            <article class="about-card">
-                                <img
-                                    src="images/pic03.jpg"
-                                    alt="Artistas compartiendo su talento"
-                                >
-                                <div class="about-card-content">
-                                    <header class="second icon solid fa-palette">
-                                        <h3>Talento artístico</h3>
-                                    </header>
-                                    <p>
-                                        Las agrupaciones de ESPOL Cultural comparten
-                                        su talento y contribuyen a fortalecer los
-                                        vínculos entre la universidad y la ciudad.
-                                    </p>
-                                </div>
-                            </article>
+                            <h2 id="titulo-sobre-evento">
+                                Más que un escenario.
+                                <em>Un punto de encuentro.</em>
+                            </h2>
 
-                        </div>
+                            <p class="about-lead">
+                                Arte en el Cerro reunió música,
+                                teatro y comunidad en una jornada
+                                para compartir el talento artístico
+                                de ESPOL.
+                            </p>
 
-                        <p class="about-source">
-                            Información basada en la publicación oficial de la ESPOL.
-                            <a
-                                href="https://www.espol.edu.ec/es/noticias/espol-y-segura-ep-llevan-la-cultura-y-espacios-de-encuentro-al-cerro-del-carmen"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Conoce más sobre la iniciativa  
+                            <p>
+                                La edición del
+                                <strong>2 de octubre de 2026</strong>
+                                contó con el Coro ESPOL,
+                                el Grupo de Teatro ESPOL
+                                y la participación especial
+                                de Elena Erazo.
+                            </p>
+
+                            <p>
+                                Debido a la lluvia, el encuentro
+                                se trasladó al Aula Magna
+                                del Campus Las Peñas, donde
+                                se desarrolló la actividad cultural.
+                            </p>
+
+                            <div class="about-facts">
+                                <span>02 / OCT / 2026</span>
+                                <span>17:00</span>
+                                <span>ACCESO LIBRE</span>
+                            </div>
+
+                            <a href="#programacion" class="about-link">
+                                Descubre la programación
+                                <span aria-hidden="true">↗</span>
                             </a>
-                        </p>
+
+                        </div>
                     </div>
-                 </section>
+
+                    <!-- Franja tipográfica animada -->
+                    <div class="about-marquee"
+                        aria-label="Participaron Coro ESPOL, Grupo de Teatro ESPOL y Elena Erazo">
+
+                        <div class="about-marquee-track" aria-hidden="true">
+                                <span>
+                                    CORO ESPOL ✦ GRUPO DE TEATRO ESPOL ✦
+                                    ELENA ERAZO ✦ CORO ESPOL ✦
+                                    GRUPO DE TEATRO ESPOL ✦ ELENA ERAZO ✦
+                                    CORO ESPOL ✦ GRUPO DE TEATRO ESPOL ✦
+                                    ELENA ERAZO ✦
+                                </span>
+                                <span>
+                                    CORO ESPOL ✦ GRUPO DE TEATRO ESPOL ✦
+                                    ELENA ERAZO ✦ CORO ESPOL ✦
+                                    GRUPO DE TEATRO ESPOL ✦ ELENA ERAZO ✦
+                                    CORO ESPOL ✦ GRUPO DE TEATRO ESPOL ✦
+                                    ELENA ERAZO ✦
+                                </span>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 

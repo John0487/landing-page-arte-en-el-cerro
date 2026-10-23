@@ -2727,119 +2727,6 @@ input, select, textarea {
 	}
 }
 
-/* Sobre Arte en el Cerro */
-#sobre-el-evento {
-    padding: 5em 0;
-    background: #f5f7fa;
-    color: #243348;
-}
-
-#sobre-el-evento .major {
-    margin-bottom: 2em;
-    text-align: center;
-}
-
-#sobre-el-evento .major h2 {
-    color: #10243e;
-    font-size: 2.4em;
-}
-
-#sobre-el-evento .major p {
-    color: #53657a;
-    font-size: 1.1em;
-}
-
-#sobre-el-evento .about-intro {
-    max-width: 900px;
-    margin: 0 auto 3em;
-    font-size: 1.05em;
-    line-height: 1.9;
-}
-
-#sobre-el-evento .about-intro p {
-    margin-bottom: 1.2em;
-}
-
-#sobre-el-evento .about-cards {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-}
-
-#sobre-el-evento .about-card {
-    overflow: hidden;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 6px 24px rgba(16, 36, 62, 0.08);
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease;
-}
-
-#sobre-el-evento .about-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(16, 36, 62, 0.14);
-}
-
-#sobre-el-evento .about-card img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-#sobre-el-evento .about-card-content {
-    padding: 24px;
-}
-
-#sobre-el-evento .about-card h3 {
-    color: #163b62;
-    font-size: 1.25em;
-    margin-bottom: 12px;
-}
-
-#sobre-el-evento .about-card p {
-    color: #53657a;
-    line-height: 1.8;
-    margin-bottom: 0;
-}
-
-#sobre-el-evento .about-source {
-    margin-top: 2em;
-    font-size: 0.9em;
-    text-align: center;
-    color: #65758a;
-}
-
-#sobre-el-evento .about-source a {
-    color: #247db8;
-    font-weight: 700;
-}
-
-/* Tabletas y móviles */
-@media screen and (max-width: 980px) {
-    #sobre-el-evento .about-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media screen and (max-width: 736px) {
-    #sobre-el-evento {
-        padding: 3em 1em;
-    }
-
-    #sobre-el-evento .major h2 {
-        font-size: 2em;
-    }
-
-    #sobre-el-evento .about-cards {
-        grid-template-columns: 1fr;
-    }
-
-    #sobre-el-evento .about-card img {
-        height: 230px;
-    }
-}
-
 /* Información del evento */
 #informacion {
     padding: 5em 0;
@@ -3370,5 +3257,346 @@ input, select, textarea {
     #inicio h2.hero-marca {
         width: 96%;
         margin-bottom: 1.25rem;
+    }
+}
+
+/* =========================================
+   SOBRE EL EVENTO - EXPERIENCIA EDITORIAL
+   ========================================= */
+
+/* Fondo principal */
+#main-wrapper > .wrapper.about-wrapper {
+    padding: 0;
+    background: #0d1c2e;
+    background-image: none;
+    text-shadow: none;
+}
+
+#main-wrapper > .wrapper.about-wrapper > .inner {
+    width: min(1180px, calc(100% - 72px));
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Sección y fondo ambiental */
+#sobre-el-evento {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(70px, 7vw, 110px) 0 36px;
+
+    background:
+        radial-gradient(
+            ellipse at 85% 20%,
+            rgba(70, 132, 187, 0.16),
+            transparent 45%
+        ),
+        #0d1c2e;
+
+    color: #ecf2fb;
+}
+
+/* Halo decorativo animado */
+#sobre-el-evento::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: -220px;
+    top: 12%;
+    z-index: -1;
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle,
+        rgba(243, 167, 61, 0.22),
+        transparent 65%
+    );
+
+    animation: about-halo 8s ease-in-out infinite alternate;
+}
+
+/* Dos columnas en escritorio */
+#sobre-el-evento .about-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1.08fr);
+    gap: clamp(30px, 5vw, 76px);
+    align-items: center;
+}
+
+#sobre-el-evento .about-visual,
+#sobre-el-evento .about-copy {
+    min-width: 0;
+}
+
+/* Fotografía */
+#sobre-el-evento .about-visual {
+    position: relative;
+}
+
+#sobre-el-evento .about-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    margin: 0;
+    overflow: hidden;
+
+    border-radius: 18px 18px 72px 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    transform: rotate(-1deg);
+}
+
+#sobre-el-evento .about-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+#sobre-el-evento .about-photo:hover img {
+    transform: scale(1.045);
+}
+
+/* Degradado sobre la fotografía */
+#sobre-el-evento .about-photo::after {
+    content: "";
+    position: absolute;
+    inset: 40% 0 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        transparent,
+        rgba(5, 13, 28, 0.9)
+    );
+}
+
+#sobre-el-evento .about-photo figcaption {
+    position: absolute;
+    left: 28px;
+    bottom: 24px;
+    z-index: 1;
+
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+#sobre-el-evento .about-photo figcaption span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #dbe7f4;
+}
+
+/* Sello sobre la foto */
+#sobre-el-evento .about-stamp {
+    position: absolute;
+    bottom: -14px;
+    right: -9px;
+    transform: rotate(4deg);
+
+    padding: 10px 16px;
+    background: #f3a73d;
+    color: #102238;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Tipografía editorial */
+#sobre-el-evento .about-eyebrow {
+    color: #f3a73d;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.19em;
+    margin-bottom: 18px;
+}
+
+#sobre-el-evento .about-copy h2 {
+    color: #ffffff;
+    font-family: 'Outfit', 'Open Sans', sans-serif;
+    font-size: clamp(2.2rem, 4.1vw, 4.2rem) !important;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -0.045em;
+    text-transform: none;
+    margin: 0 0 24px;
+}
+
+#sobre-el-evento .about-copy h2 em {
+    display: block;
+    color: #f3a73d;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Párrafos legibles */
+#sobre-el-evento .about-copy p {
+    color: #c9d6e6;
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+#sobre-el-evento .about-copy .about-lead {
+    color: #ffffff;
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+#sobre-el-evento .about-copy strong {
+    color: #ffffff;
+}
+
+/* Datos destacados sin tarjetas */
+#sobre-el-evento .about-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    padding: 16px 0;
+    margin: 25px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#sobre-el-evento .about-facts span {
+    color: #f5ca89;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+}
+
+/* Enlace animado */
+#sobre-el-evento .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    border-bottom: 2px solid #f3a73d;
+    padding-bottom: 8px;
+
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+
+#sobre-el-evento .about-link:hover {
+    gap: 20px;
+    color: #f3a73d;
+}
+
+/* Franja inferior animada */
+#sobre-el-evento .about-marquee {
+    overflow: hidden;
+    margin-top: 78px;
+    padding: 16px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.17);
+    color: #a6c3da;
+    white-space: nowrap;
+}
+
+#sobre-el-evento .about-marquee-track {
+    display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+    width: max-content;
+	gap: 0;
+	
+    animation: about-scroll 27s linear infinite;
+	will-change: transform;
+}
+
+#sobre-el-evento .about-marquee-track > span {
+    display: block;
+	flex: 0 0 auto;
+	white-space: nowrap;
+
+	padding-right: 2rem;
+
+    font-size: clamp(0.8rem, 1.4vw, 1.05rem);
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+/* Animaciones */
+@keyframes about-scroll {
+    from {
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@keyframes about-halo {
+    to {
+        transform: translate(65px, -20px) scale(1.13);
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 980px) {
+    #sobre-el-evento .about-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    #sobre-el-evento .about-visual {
+        max-width: 750px;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 736px) {
+    #main-wrapper > .wrapper.about-wrapper > .inner {
+        width: calc(100% - 36px);
+    }
+
+    #sobre-el-evento {
+        padding: 65px 0 20px;
+    }
+
+    #sobre-el-evento .about-photo {
+        aspect-ratio: 4 / 3;
+    }
+
+    #sobre-el-evento .about-layout {
+        gap: 45px;
+    }
+
+    #sobre-el-evento .about-copy h2 {
+        font-size: clamp(2rem, 9vw, 2.8rem) !important;
+    }
+
+    #sobre-el-evento .about-marquee {
+        margin-top: 48px;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #sobre-el-evento::before,
+    #sobre-el-evento .about-marquee-track {
+        animation: none;
+    }
+
+    #sobre-el-evento .about-photo img,
+    #sobre-el-evento .about-link {
+        transition: none;
     }
 }
