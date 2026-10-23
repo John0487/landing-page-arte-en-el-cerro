@@ -3408,6 +3408,136 @@ input, select, textarea {
     }
 }
 
+
+/* =========================================
+   REEL DE INSTAGRAM - GALERÍA
+   ========================================= */
+
+#galeria .reel-destacado {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+
+    margin-top: 5rem;
+    padding: clamp(2rem, 5vw, 4rem);
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(52, 142, 208, 0.18),
+            transparent 50%
+        ),
+        #102238;
+
+    border-radius: 24px;
+}
+
+/* Contenido editorial */
+#galeria .reel-contenido {
+    min-width: 0;
+}
+
+#galeria .reel-etiqueta {
+    color: #f3a73d;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+}
+
+#galeria .reel-contenido h3 {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.8rem);
+    line-height: 1.15;
+    text-transform: none;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.5rem;
+}
+
+#galeria .reel-contenido h3 em {
+    display: block;
+    color: #f3a73d;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#galeria .reel-contenido > p:not(.reel-etiqueta) {
+    color: #c9d6e6;
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 2rem;
+}
+
+/* Enlace a Instagram */
+#galeria .reel-enlace {
+    display: inline-block;
+    color: #f3a73d;
+    font-weight: 800;
+    text-decoration: none;
+
+    padding-bottom: 7px;
+    border-bottom: 2px solid currentColor;
+
+    transition: color 0.25s ease;
+}
+
+#galeria .reel-enlace:hover {
+    color: #ffffff;
+}
+
+/* Reproductor */
+#galeria .reel-reproductor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 0;
+}
+
+/* Ajustes al contenedor de Instagram */
+#galeria .reel-reproductor .instagram-media {
+    width: 100% !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 980px) {
+    #galeria .reel-destacado {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    #galeria .reel-contenido {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #galeria .reel-destacado {
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+    }
+
+    #galeria .reel-reproductor {
+        overflow-x: auto;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #galeria .reel-enlace {
+        transition: none;
+    }
+}
+
 /* =========================================
    REDISEÑO GLOBAL - ARTE EN EL CERRO
    Encabezado y espaciados
