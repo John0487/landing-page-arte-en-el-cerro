@@ -22,11 +22,19 @@
     <div id="header-wrapper">
         <header id="header">
             <div class="inner">
-
-                <h1>
-                    <a href="#inicio" id="logo">ESPOL</a>
-                </h1>
-
+                <div class="nav-brand">
+                    <a href="#inicio"
+                    id="logo"
+                    aria-label="ESPOL Cultural - Ir al inicio">
+                        <img
+                            src="images/logo-espol-cultural.png"
+                            alt="ESPOL Cultural"
+                            class="logo-cultural"
+                            width="446"
+                            height="448"
+                        >
+                    </a>
+                </div>
                 <nav id="nav" aria-label="Navegación principal">
                     <ul>
                         <li class="current_page_item">
@@ -60,7 +68,7 @@
 
         <section id="inicio">
             <div class="hero-content">
-                <h2 class="hero-marca">
+                <h1 class="hero-marca">
                     <img
                         src="images/logo-arte-en-el-cerro.png"
                         alt="Arte en el Cerro del Carmen"
@@ -68,7 +76,7 @@
                         width="2172"
                         height="724"
                     >
-                </h2>
+                </h1>
                 <h3>Cultura, arte y comunidad</h3>
                 <p>
                     Un espacio para disfrutar de las expresiones artísticas
@@ -99,7 +107,7 @@
                         <div class="about-visual">
                             <figure class="about-photo">
                                 <img
-                                    src="images/coro-espol.jpeg"
+                                    src="images/aula-magna.jpeg"
                                     alt="Presentación del Coro ESPOL durante Arte en el Cerro"
                                     loading="lazy"
                                 >
@@ -190,68 +198,157 @@
             </div>
         </div>
 
-        <div class="wrapper style2">
+        <div class="wrapper style2 lineup-wrapper">
             <div class="inner">
                 <!-- Programación artística -->
-                <section id="programacion" class="container box feature2">
-                    <header class="major">
-                        <h2>Programación artística</h2>
-                        <p>
-                            Arte en el Cerro reunió talento artístico
-                            de la ESPOL y una participación especial
-                            en una jornada dedicada a la cultura
-                            y la comunidad.
+                <section id="programacion"
+                        aria-labelledby="titulo-programacion">
+
+                    <header class="lineup-heading">
+                        <p class="lineup-eyebrow">
+                            ✦ EL TALENTO SOBRE EL ESCENARIO
+                        </p>
+
+                        <h2 id="titulo-programacion">
+                            Programación <em>artística</em>
+                        </h2>
+
+                        <p class="lineup-intro">
+                            Tres participaciones que dieron vida
+                            a Arte en el Cerro el 2 de octubre
+                            de 2026.
                         </p>
                     </header>
 
-                    <div class="row">
+                    <div class="lineup-list">
 
                         <!-- Coro ESPOL -->
-                        <div class="col-4 col-12-medium">
-                            <article class="programacion-card">
-                                <h3>Coro ESPOL</h3>
-                                <p>
-                                    El coro institucional de la ESPOL
-                                    formó parte de esta edición,
-                                    compartiendo su talento musical
-                                    con la comunidad.
+                        <article class="lineup-act">
+
+                            <div class="lineup-act-copy">
+                                <span class="lineup-number"
+                                    aria-hidden="true">01</span>
+
+                                <p class="lineup-category">
+                                    MÚSICA CORAL
                                 </p>
-                            </article>
-                        </div>
+
+                                <h3>Coro ESPOL</h3>
+
+                                <p class="lineup-description">
+                                    La expresión musical del coro
+                                    institucional formó parte de
+                                    esta jornada cultural, compartiendo
+                                    el talento artístico de ESPOL.
+                                </p>
+
+                                <span class="lineup-detail">
+                                    ✦ Talento politécnico
+                                </span>
+                            </div>
+
+                            <figure class="lineup-photo">
+                                <img
+                                    src="images/coro-espol.jpeg"
+                                    alt="Coro ESPOL durante su presentación en el Aula Magna"
+                                    loading="lazy"
+                                >
+                                <figcaption>Coro ESPOL</figcaption>
+                            </figure>
+
+                        </article>
 
                         <!-- Grupo de Teatro ESPOL -->
-                        <div class="col-4 col-12-medium">
-                            <article class="programacion-card">
+                        <article class="lineup-act">
+
+                            <div class="lineup-act-copy">
+                                <span class="lineup-number"
+                                    aria-hidden="true">02</span>
+
+                                <p class="lineup-category">
+                                    ARTES ESCÉNICAS
+                                </p>
+
                                 <h3>Grupo de Teatro ESPOL</h3>
-                                <p>
-                                    Las artes escénicas estuvieron
-                                    representadas por el Grupo de
-                                    Teatro ESPOL, acercando la
-                                    expresión teatral al público.
-                                </p>
-                            </article>
-                        </div>
 
-                        <!-- Invitada especial -->
-                        <div class="col-4 col-12-medium">
-                            <article class="programacion-card">
+                                <p class="lineup-description">
+                                    El Grupo de Teatro ESPOL
+                                    aportó la expresión de las
+                                    artes escénicas a esta edición,
+                                    fortaleciendo el encuentro
+                                    entre arte y comunidad.
+                                </p>
+
+                                <span class="lineup-detail">
+                                    ✦ Expresión escénica
+                                </span>
+                            </div>
+
+                            <figure class="lineup-photo">
+                                <img
+                                    src="images/teatro-espol.jpeg"
+                                    alt="Presentación del Grupo de Teatro ESPOL"
+                                    loading="lazy"
+                                >
+                                <figcaption>Grupo de Teatro ESPOL</figcaption>
+                            </figure>
+
+                        </article>
+
+                        <!-- Elena Erazo -->
+                        <article class="lineup-act">
+
+                            <div class="lineup-act-copy">
+                                <span class="lineup-number"
+                                    aria-hidden="true">03</span>
+
+                                <p class="lineup-category">
+                                    INVITADA ESPECIAL
+                                </p>
+
                                 <h3>Elena Erazo</h3>
-                                <p>
-                                    Elena Erazo participó como
-                                    invitada especial, formando parte
-                                    de esta celebración cultural
-                                    y artística.
-                                </p>
-                            </article>
-                        </div>
 
+                                <p class="lineup-description">
+                                    Elena Erazo fue la invitada
+                                    especial de esta edición,
+                                    sumándose a la celebración
+                                    del arte, la cultura y la
+                                    convivencia comunitaria.
+                                </p>
+
+                                <span class="lineup-detail">
+                                    ✦ Participación especial
+                                </span>
+                            </div>
+
+                            <figure class="lineup-photo">
+                                <img
+                                    src="images/elena-erazo.jpeg"
+                                    alt="Elena Erazo durante Arte en el Cerro"
+                                    loading="lazy"
+                                >
+                                <figcaption>Elena Erazo</figcaption>
+                            </figure>
+
+                        </article>
 
                     </div>
 
+                    <div class="lineup-bottom">
+                        <p>
+                            Participantes confirmados de la edición
+                            del 2 de octubre de 2026.
+                            No se dispone de horarios individuales.
+                        </p>
+
+                        <a href="#galeria" class="lineup-link">
+                            Explorar la galería
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
                 </section>
             </div>
         </div>
-
         <div class="wrapper style1">
             <div class="inner">
                 <!-- Galería -->

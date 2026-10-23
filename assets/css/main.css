@@ -2428,42 +2428,6 @@ input, select, textarea {
 
 	}
 
-/* ===== Logotipo ESPOL ===== */
-
-#header h1 a#logo {
-    display: inline-block;
-    color: #ffffff;
-    font-size: 1.65em;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    line-height: 1.2;
-    text-decoration: none;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
-    transition: color 0.25s ease, text-shadow 0.25s ease;
-}
-
-/* Acento decorativo debajo de ESPOL */
-#header h1 a#logo::after {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 4px;
-    margin-top: 7px;
-    border-radius: 3px;
-    background: #398fd0;
-    transition: width 0.25s ease;
-}
-
-/* Efecto al pasar el cursor */
-#header h1 a#logo:hover {
-    color: #d9efff;
-    text-shadow: 0 0 10px rgba(64, 145, 191, 0.35);
-}
-
-#header h1 a#logo:hover::after {
-    width: 75px;
-}
-
 
 /* =========================================
    HEADER WRAPPER Y FONDO DIFUMINADO
@@ -2509,6 +2473,84 @@ input, select, textarea {
         rgba(8, 22, 40, 0.48) 100%
     );
 }
+
+
+/* =========================================
+   LOGO ESPOL CULTURAL - NAVBAR
+   ========================================= */
+
+/* Contenedor */
+#header .nav-brand {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin: 0;
+    min-width: 0;
+}
+
+/* Enlace del logotipo */
+#header .nav-brand #logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    line-height: 1;
+    text-decoration: none;
+}
+
+/* Imagen institucional */
+#header .logo-cultural {
+    display: block;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+
+    border-radius: 9px;
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Interacción */
+#header .nav-brand #logo:hover .logo-cultural {
+    transform: scale(1.06);
+    box-shadow:
+        0 6px 20px rgba(243, 167, 61, 0.2);
+}
+
+/* Escritorios medianos */
+@media screen and (min-width: 981px)
+       and (max-width: 1150px) {
+
+    #header .logo-cultural {
+        width: 56px;
+        height: 56px;
+    }
+
+    #header .inner {
+        gap: 12px;
+    }
+}
+
+/* Si ZeroFour reproduce el logo en la barra móvil */
+#titleBar .title img.logo-cultural {
+    display: inline-block;
+    width: auto;
+    height: 32px;
+    vertical-align: middle;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #header .logo-cultural {
+        transition: none;
+    }
+}
+
 
 /* =========================================
    ENCABEZADO TRANSLÚCIDO
@@ -2814,111 +2856,305 @@ input, select, textarea {
     }
 }
 
+
 /* =========================================
-   PROGRAMACIÓN ARTÍSTICA
-   Arte en el Cerro
+   PROGRAMACIÓN - DISEÑO EDITORIAL
    ========================================= */
 
+#main-wrapper .wrapper.lineup-wrapper {
+    background: #f7f4ef;
+    background-image: none;
+    text-shadow: none;
+}
+
 #programacion {
-	padding: 1em 0;
-	text-align: center;
+    position: relative;
+    padding: 2rem 0;
+    color: #243348;
 }
 
 /* Encabezado */
-#programacion .major {
-	border-bottom: none;
-	margin-bottom: 3em;
+#programacion .lineup-heading {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
 }
 
-#programacion .major::after {
-	display: none;
+#programacion .lineup-eyebrow {
+    color: #b97925;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .17em;
+    margin-bottom: 1.5rem;
 }
 
-#programacion .major h2 {
-	color: #10243e;
-	font-size: 2.4em;
-	margin-bottom: 0.8em;
+#programacion .lineup-heading h2 {
+    color: #14263c;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin-bottom: 1.5rem;
 }
 
-#programacion .major p {
-	color: #53657a;
-	font-size: 1.1em;
-	line-height: 1.8;
-	max-width: 750px;
-	margin: 0 auto;
-	position: static;
+#programacion .lineup-heading h2 em {
+    color: #c88a36;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
-/* Distribución de tarjetas */
-#programacion .row {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 24px;
-	margin: 0;
+#programacion .lineup-intro {
+    color: #53657a;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
-#programacion .row > div {
-	width: auto;
-	min-width: 0;
-	padding: 0;
+/* Lista editorial */
+#programacion .lineup-list {
+    border-bottom: 1px solid #d8d5d0;
 }
 
-/* Tarjetas de artistas */
-#programacion .programacion-card {
-	height: 100%;
-	padding: 32px 26px;
-	background: #ffffff;
-	border: 1px solid #dce7f3;
-	border-top: 4px solid #348ed0;
-	border-radius: 14px;
-	box-shadow: 0 6px 24px rgba(16, 36, 62, 0.08);
-	text-align: left;
+#programacion .lineup-act {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1fr);
 
-	transition: transform 0.25s ease,
-				box-shadow 0.25s ease;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 6rem);
+
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    border-top: 1px solid #d8d5d0;
 }
 
-/* Efecto visual */
-#programacion .programacion-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 12px 30px rgba(16, 36, 62, 0.14);
+#programacion .lineup-act-copy {
+    min-width: 0;
 }
 
-/* Nombres de participantes */
-#programacion .programacion-card h3 {
-	color: #163b62;
-	font-size: 1.25em;
-	line-height: 1.5;
-	margin: 0 0 16px;
+/* Alternar fotografía y contenido */
+#programacion .lineup-act:nth-child(even)
+.lineup-photo {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-/* Descripciones */
-#programacion .programacion-card p {
-	color: #53657a;
-	font-size: 1em;
-	line-height: 1.8;
-	margin-bottom: 0;
+#programacion .lineup-act:nth-child(even)
+.lineup-act-copy {
+    grid-column: 2;
+    grid-row: 1;
 }
 
-/* Adaptación a tablets y celulares */
+/* Numeración grande */
+#programacion .lineup-number {
+    display: block;
+    color: #d6cbbb;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(5rem, 10vw, 9rem);
+    font-weight: 800;
+    letter-spacing: -.08em;
+    line-height: .85;
+    margin-bottom: 1.6rem;
+}
+
+/* Textos */
+#programacion .lineup-category {
+    color: #b97925;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    margin-bottom: .9rem;
+}
+
+#programacion .lineup-act h3 {
+    color: #14263c;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem) !important;
+    line-height: 1.2;
+    letter-spacing: -.035em;
+    text-transform: none;
+    margin: 0 0 1.2rem;
+}
+
+#programacion .lineup-description {
+    color: #53657a;
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+#programacion .lineup-detail {
+    color: #285b87;
+    font-size: .85rem;
+    font-weight: 800;
+}
+
+/* Fotografías */
+#programacion .lineup-photo {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    background: #122238;
+    border-radius: 20px 20px 60px 20px;
+    box-shadow:
+        0 20px 45px rgba(16, 36, 62, .16);
+}
+
+#programacion .lineup-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+#programacion .lineup-photo:hover img {
+    transform: scale(1.06);
+}
+
+/* Fotografía de Elena Erazo */
+#programacion .lineup-act:last-child .lineup-photo img {
+    object-fit: cover;
+    object-position: center 75%;
+}
+
+/* Degradado para el texto */
+#programacion .lineup-photo::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        transparent,
+        rgba(7, 17, 35, .8)
+    );
+}
+
+#programacion .lineup-photo figcaption {
+    position: absolute;
+    left: 22px;
+    bottom: 18px;
+    z-index: 1;
+
+    color: white;
+    font-weight: 800;
+    font-size: .9rem;
+    letter-spacing: .04em;
+}
+
+/* Cierre y enlace */
+#programacion .lineup-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2.5rem;
+}
+
+#programacion .lineup-bottom p {
+    color: #65758a;
+    font-size: .9rem;
+    margin: 0;
+}
+
+#programacion .lineup-link {
+    flex-shrink: 0;
+    color: #285b87;
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 2px solid #c88a36;
+    padding-bottom: 7px;
+}
+
+#programacion .lineup-link span {
+    display: inline-block;
+    transition: transform .25s ease;
+}
+
+#programacion .lineup-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* Tablets y celulares */
 @media screen and (max-width: 980px) {
-	#programacion .row {
-		grid-template-columns: 1fr;
-	}
+    #programacion .lineup-act {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-	#programacion .major h2 {
-		font-size: 2em;
-	}
+    #programacion .lineup-act:nth-child(even)
+    .lineup-photo,
+    #programacion .lineup-act:nth-child(even)
+    .lineup-act-copy {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    #programacion .lineup-photo {
+        max-width: 700px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 736px) {
-	#programacion {
-		padding: 1em;
-	}
+    #programacion .lineup-heading {
+        margin-bottom: 2.5rem;
+    }
 
-	#programacion .programacion-card {
-		padding: 26px 22px;
-	}
+    #programacion .lineup-number {
+        font-size: 5.5rem;
+    }
+
+    #programacion .lineup-act {
+        padding: 3rem 0;
+    }
+
+    #programacion .lineup-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #programacion .lineup-photo img,
+    #programacion .lineup-link span {
+        transition: none;
+    }
+
+    #programacion .lineup-photo:hover img {
+        transform: none;
+    }
+}
+
+
+/* Aparición progresiva al desplazarse */
+@media (prefers-reduced-motion: no-preference) {
+
+    @supports (animation-timeline: view()) {
+
+        #programacion .lineup-act {
+            animation: lineup-reveal 1s ease-out both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 25%;
+        }
+    }
+}
+
+@keyframes lineup-reveal {
+    from {
+        opacity: 0.35;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================================
@@ -3076,18 +3312,6 @@ input, select, textarea {
         padding: 14px 22px;
     }
 
-    #header h1 {
-        position: static;
-        flex: 0 0 auto;
-        margin: 0;
-        font-size: 1.15rem;
-    }
-
-    #header h1 a#logo {
-        font-size: 1.25rem;
-        white-space: nowrap;
-    }
-
     #nav {
         position: static;
         flex: 1;
@@ -3217,7 +3441,7 @@ input, select, textarea {
    ========================================= */
 
 /* Contenedor del logo */
-#inicio h2.hero-marca {
+#inicio h1.hero-marca {
     display: block;
     width: min(780px, 100%);
     max-width: 100%;
@@ -3246,7 +3470,7 @@ input, select, textarea {
 
 /* Ajustes para tablets */
 @media screen and (max-width: 980px) {
-    #inicio h2.hero-marca {
+    #inicio h1.hero-marca {
         width: min(650px, 94%);
         margin-bottom: 1.5rem;
     }
@@ -3254,7 +3478,7 @@ input, select, textarea {
 
 /* Ajustes para celulares */
 @media screen and (max-width: 736px) {
-    #inicio h2.hero-marca {
+    #inicio h1.hero-marca {
         width: 96%;
         margin-bottom: 1.25rem;
     }
