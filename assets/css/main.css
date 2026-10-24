@@ -3572,186 +3572,9 @@ input, select, textarea {
     line-height: 1.8;
 }
 
-/* Contenedor de fotografías */
-#galeria .galeria-accordion {
-    display: flex;
-    width: 100%;
-    gap: 14px;
-    height: clamp(380px, 43vw, 540px);
-}
-
-/* Panel individual */
-#galeria .galeria-panel {
-    all: unset;
-    box-sizing: border-box;
-
-    position: relative;
-    display: block;
-    flex: 1 1 0;
-    min-width: 0;
-    height: 100%;
-    overflow: hidden;
-
-    background: #102238;
-    border-radius: 18px;
-    cursor: pointer;
-    isolation: isolate;
-
-    transition: flex-grow .65s
-        cubic-bezier(.22, 1, .36, 1);
-}
-
-/* Panel seleccionado */
-#galeria .galeria-panel.is-active {
-    flex-grow: 2.7;
-}
-
-/* Imagen */
-#galeria .galeria-panel img {
-    position: absolute;
-    inset: 0;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform .7s ease;
-}
-
-#galeria .galeria-panel.is-active img {
-    transform: scale(1.035);
-}
-
-/* Encuadre especial de Elena */
-#galeria .galeria-panel:last-child img {
-    object-position: center 70%;
-}
-
-/* Sombra para leer los títulos */
-#galeria .galeria-panel::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-
-    background: linear-gradient(
-        to top,
-        rgba(5, 15, 30, .94),
-        transparent 68%
-    );
-}
-
-/* Textos sobre la fotografía */
-#galeria .galeria-panel-text {
-    position: absolute;
-    z-index: 2;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    color: #ffffff;
-    text-align: left;
-}
-
-#galeria .galeria-panel-index {
-    color: #f3a73d;
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .1em;
-    white-space: nowrap;
-}
-
-#galeria .galeria-panel-text strong {
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
-    line-height: 1.15;
-    text-transform: none;
-
-    opacity: 0;
-    transform: translateY(12px);
-
-    transition:
-        opacity .35s ease,
-        transform .35s ease;
-}
-
-#galeria .galeria-panel-description {
-    color: #dce6ef;
-    font-size: .88rem;
-    line-height: 1.5;
-
-    opacity: 0;
-    transform: translateY(10px);
-
-    transition:
-        opacity .35s ease,
-        transform .35s ease;
-}
-
-/* Mostrar textos del panel activo */
-#galeria .galeria-panel.is-active strong,
-#galeria .galeria-panel.is-active
-.galeria-panel-description {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Navegación por teclado */
-#galeria .galeria-panel:focus-visible {
-    outline: 3px solid #f3a73d;
-    outline-offset: 3px;
-}
-
-#galeria .galeria-ayuda {
-    color: #65758a;
-    text-align: center;
-    font-size: .85rem;
-    margin: 1.5rem 0 0;
-}
-
-/* Celulares y tablets */
-@media screen and (max-width: 980px) {
-
-    #galeria .galeria-accordion {
-        flex-direction: column;
-        height: auto;
-    }
-
-    #galeria .galeria-panel {
-        flex: none;
-        width: 100%;
-        height: 115px;
-
-        transition: height .55s ease;
-    }
-
-    #galeria .galeria-panel.is-active {
-        height: 320px;
-    }
-
-    #galeria .galeria-panel-text {
-        left: 20px;
-        right: 20px;
-        bottom: 18px;
-    }
-}
-
 @media screen and (max-width: 736px) {
     #galeria {
         padding: 2rem 0 3rem;
-    }
-
-    #galeria .galeria-panel.is-active {
-        height: 290px;
     }
 
     #galeria .galeria-heading h2 {
@@ -3759,16 +3582,445 @@ input, select, textarea {
     }
 }
 
-/* Accesibilidad */
+
+/* =========================================
+   GALERÍA AUDIOVISUAL - 2 OCTUBRE
+   ========================================= */
+
+#galeria .galeria-video {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, .85fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+
+    padding: clamp(1.5rem, 3vw, 3rem);
+    margin-top: 2.5rem;
+
+    background: #101b30;
+    border-radius: 22px;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+#galeria .video-principal,
+#galeria .video-selector {
+    min-width: 0;
+}
+
+#galeria .video-etiqueta,
+#galeria .video-selector-etiqueta {
+    color: #f3a73d;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+    margin: 0 0 1rem;
+}
+
+#galeria .video-principal h3 {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin: 0 0 1.5rem;
+}
+
+#galeria .video-principal h3 em {
+    color: #f3a73d;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+/* Reproductor */
+#galeria .video-marco {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #050b14;
+    border-radius: 14px;
+}
+
+#galeria #reproductor-octubre {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #050b14;
+}
+
+/* Título bajo el video */
+#galeria .video-informacion {
+    padding-top: 1.5rem;
+}
+
+#galeria .video-actual {
+    color: #f3a73d;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+    margin: 0 0 .5rem;
+}
+
+#galeria .video-informacion h4 {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.3;
+    text-transform: none;
+    margin: 0 0 .4rem;
+}
+
+#galeria #video-descripcion {
+    color: #bfcfe0;
+    font-size: .9rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Selector lateral */
+#galeria .video-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+#galeria .video-opcion {
+    all: unset;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 18px 16px;
+
+    color: #ffffff;
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+#galeria .video-opcion:hover {
+    background: rgba(255,255,255,.1);
+    transform: translateX(4px);
+}
+
+#galeria .video-opcion.is-active {
+    background: rgba(243,167,61,.13);
+    border-color: #f3a73d;
+}
+
+#galeria .video-opcion:focus-visible {
+    outline: 3px solid #f3a73d;
+    outline-offset: 3px;
+}
+
+#galeria .video-numero {
+    color: #f3a73d;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+#galeria .video-opcion-texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    gap: 4px;
+}
+
+#galeria .video-opcion-texto strong {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+#galeria .video-opcion-texto small {
+    color: #acbfd4;
+    font-size: .76rem;
+}
+
+#galeria .video-flecha {
+    color: #f3a73d;
+    font-size: 1.3rem;
+}
+
+#galeria .video-nota {
+    color: #a9bed4;
+    font-size: .8rem;
+    line-height: 1.7;
+    margin: 1rem 0 0;
+}
+
+/* Tablets y celulares */
+@media screen and (max-width: 980px) {
+    #galeria .galeria-video {
+        grid-template-columns: 1fr;
+    }
+
+    #galeria .video-selector {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #galeria .galeria-video {
+        padding: 1.3rem;
+        border-radius: 16px;
+    }
+
+    #galeria .video-principal h3 {
+        font-size: 2rem;
+    }
+
+    #galeria .video-informacion h4 {
+        font-size: 1.4rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    #galeria .galeria-panel,
-    #galeria .galeria-panel img,
-    #galeria .galeria-panel-text strong,
-    #galeria .galeria-panel-description {
+    #galeria .video-opcion {
         transition: none;
     }
 }
 
+/* =========================================
+   ARCHIVO HISTÓRICO - ARTE EN EL CERRO
+   ========================================= */
+
+#galeria .archivo-ediciones {
+    margin-top: 5rem;
+    padding: 4rem 0 1rem;
+    border-top: 1px solid rgba(20, 38, 60, .15);
+}
+
+#galeria .archivo-heading {
+    max-width: 760px;
+    margin: 0 0 2.5rem;
+}
+
+#galeria .archivo-eyebrow {
+    color: #b97925;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+    margin-bottom: 1rem;
+}
+
+#galeria .archivo-heading h3 {
+    color: #14263c;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin: 0 0 1.2rem;
+}
+
+#galeria .archivo-heading h3 em {
+    color: #c88a36;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+#galeria .archivo-heading > p:last-child {
+    color: #53657a;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Radios accesibles pero visualmente ocultos */
+#galeria .archivo-selector {
+    position: relative;
+}
+
+#galeria .archivo-selector > input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* Selector de fechas */
+#galeria .archivo-fechas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 2.5rem;
+}
+
+#galeria .archivo-fechas label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 22px;
+    margin: 0;
+
+    color: #285b87;
+    background: transparent;
+    border: 1px solid rgba(40, 91, 135, .25);
+    border-radius: 100px;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: .88rem;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+#galeria .archivo-fechas label span {
+    opacity: .7;
+    font-weight: 400;
+}
+
+/* Fecha seleccionada */
+#archivo-julio:checked ~ .archivo-fechas
+label[for="archivo-julio"],
+#archivo-agosto:checked ~ .archivo-fechas
+label[for="archivo-agosto"],
+#archivo-septiembre:checked ~ .archivo-fechas
+label[for="archivo-septiembre"] {
+    color: #ffffff;
+    background: #14263c;
+    border-color: #14263c;
+}
+
+/* Foco de teclado */
+#archivo-julio:focus-visible ~ .archivo-fechas
+label[for="archivo-julio"],
+#archivo-agosto:focus-visible ~ .archivo-fechas
+label[for="archivo-agosto"],
+#archivo-septiembre:focus-visible ~ .archivo-fechas
+label[for="archivo-septiembre"] {
+    outline: 3px solid #f3a73d;
+    outline-offset: 3px;
+}
+
+/* Mostrar solo la fecha seleccionada */
+#galeria .archivo-panel {
+    display: none;
+    animation: archivo-aparecer .35s ease both;
+}
+
+#archivo-julio:checked ~ .archivo-contenidos #panel-julio,
+#archivo-agosto:checked ~ .archivo-contenidos #panel-agosto,
+#archivo-septiembre:checked ~ .archivo-contenidos #panel-septiembre {
+    display: block;
+}
+
+#galeria .archivo-panel h4 {
+    color: #14263c;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    text-transform: none;
+    margin: 0 0 .3rem;
+}
+
+#galeria .archivo-panel > p {
+    color: #65758a;
+    margin: 0 0 1.5rem;
+}
+
+/* Tres fotografías de la fecha */
+#galeria .archivo-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+#galeria .archivo-fotos figure {
+    min-width: 0;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 14px;
+    background: #14263c;
+}
+
+#galeria .archivo-fotos img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    transition: transform .45s ease;
+}
+
+#galeria .archivo-fotos figure:hover img {
+    transform: scale(1.06);
+}
+
+@keyframes archivo-aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adaptación móvil */
+@media screen and (max-width: 736px) {
+    #galeria .archivo-ediciones {
+        margin-top: 3rem;
+        padding-top: 3rem;
+    }
+
+    #galeria .archivo-heading h3 {
+        font-size: 2.3rem;
+    }
+
+    #galeria .archivo-fechas {
+        gap: 8px;
+    }
+
+    #galeria .archivo-fechas label {
+        padding: 10px 14px;
+        font-size: .78rem;
+    }
+
+    #galeria .archivo-fotos {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 12px;
+    }
+
+    #galeria .archivo-fotos figure {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #galeria .archivo-panel {
+        animation: none;
+    }
+
+    #galeria .archivo-fotos img,
+    #galeria .archivo-fechas label {
+        transition: none;
+    }
+}
 
 /* =========================================
    REEL DE INSTAGRAM - GALERÍA
@@ -4291,6 +4543,16 @@ input, select, textarea {
     color: #ffffff;
 }
 
+#sobre-el-evento .about-purpose {
+    color: #f3a73d;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 800;
+    letter-spacing: .05em;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
 /* Datos destacados sin tarjetas */
 #sobre-el-evento .about-facts {
     display: flex;
@@ -4801,6 +5063,213 @@ input, select, textarea {
     #footer .footer-social a::before,
     #footer .footer-arrow,
     #footer .footer-reel {
+        transition: none;
+    }
+}
+
+/* =========================================
+   FORMULARIO DE CONTACTO - DEMOSTRACIÓN
+   ========================================= */
+
+#footer .footer-form-section {
+    display: grid;
+    grid-template-columns:
+        minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 5vw, 5rem);
+
+    margin-top: 4rem;
+    padding: 3.5rem 0;
+
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+
+/* Encabezado */
+#footer .footer-form-eyebrow {
+    color: #f3a73d;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+    margin-bottom: 1rem;
+}
+
+#footer .footer-form-heading h3 {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.4rem);
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin: 0 0 1.3rem;
+}
+
+#footer .footer-form-heading h3 em {
+    color: #f3a73d;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+#footer .footer-form-heading > p:last-child {
+    color: #b8c9dc;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Distribución */
+#footer .footer-form {
+    min-width: 0;
+}
+
+#footer .footer-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#footer .footer-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#footer .footer-form-field label {
+    color: #e7edf5;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+/* Campos de entrada */
+#footer .footer-form input,
+#footer .footer-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    color: #ffffff;
+    background: rgba(255,255,255,.06);
+
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: .95rem;
+    line-height: 1.5;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease;
+}
+
+#footer .footer-form input::placeholder,
+#footer .footer-form textarea::placeholder {
+    color: #9cadc3;
+    opacity: 1;
+}
+
+#footer .footer-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Al seleccionar un campo */
+#footer .footer-form input:focus,
+#footer .footer-form textarea:focus {
+    background: rgba(255,255,255,.09);
+    border-color: #f3a73d;
+    outline: 2px solid rgba(243,167,61,.25);
+    outline-offset: 2px;
+}
+
+/* Parte inferior */
+#footer .footer-form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#footer .footer-form-bottom p {
+    max-width: 300px;
+    margin: 0;
+
+    color: #a9bed4;
+    font-size: .76rem;
+    line-height: 1.6;
+}
+
+/* Botón visual */
+#footer .footer-form-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 22px;
+
+    color: #102238 !important;
+    background: #f3a73d;
+    background-image: none;
+
+    border: 0;
+    border-radius: 100px;
+    box-shadow: none;
+    text-shadow: none;
+
+    font-size: .82rem;
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+
+    cursor: default;
+    transition: background .25s ease;
+}
+
+#footer .footer-form-button:hover {
+    background: #ffc46b;
+}
+
+#footer .footer-form-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Tablets */
+@media screen and (max-width: 980px) {
+    #footer .footer-form-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares */
+@media screen and (max-width: 736px) {
+    #footer .footer-form-section {
+        padding: 2.5rem 0;
+    }
+
+    #footer .footer-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    #footer .footer-form-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #footer .footer-form-button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #footer .footer-form input,
+    #footer .footer-form textarea,
+    #footer .footer-form-button {
         transition: none;
     }
 }

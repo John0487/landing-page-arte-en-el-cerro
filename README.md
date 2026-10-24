@@ -4,22 +4,34 @@
 
 ### 1.1. Contexto del proyecto
 
-Arte en el Cerro es una iniciativa cultural de acceso libre
-que busca fortalecer la relación entre el arte, la comunidad
-politécnica y la ciudad de Guayaquil.
 
-La edición del 2 de octubre de 2026 contó con la participación
-del Coro ESPOL, el Grupo de Teatro ESPOL y la invitada especial
-Elena Erazo. Aunque inicialmente estaba prevista en un espacio
-al aire libre, debido a la lluvia la actividad se desarrolló
-en el Aula Magna de ESPOL Campus Las Peñas.
+### 1.1. Contexto del proyecto
 
-Como parte del proyecto académico, se desarrolló una landing
-page basada en la plantilla ZeroFour de HTML5 UP. La página
-reúne información del evento, programación artística,
-fotografías, contenido audiovisual, ubicación y enlaces
-institucionales, mediante una interfaz personalizada,
-interactiva y adaptable a diferentes dispositivos.
+Arte en el Cerro es una iniciativa cultural desarrollada
+por ESPOL en conjunto con Segura EP y la comunidad del
+Cerro del Carmen, vinculada al propósito de acercar el
+arte a la ciudadanía y fortalecer la convivencia comunitaria.
+
+La iniciativa comenzó el 21 de julio de 2026 y contempla
+actividades artísticas el primer viernes de cada mes,
+a las 17:00, bajo la idea del arte como herramienta
+de transformación social.
+
+Esta landing page tiene como protagonista la cuarta
+jornada, realizada el 2 de octubre de 2026. Participaron
+el Coro ESPOL, el Grupo de Teatro ESPOL y la invitada
+especial Elena Erazo. Debido a las lluvias, el encuentro
+se desarrolló en el Aula Magna de ESPOL Campus Las Peñas,
+en Guayaquil.
+
+El sitio también presenta un archivo visual de los encuentros
+del 21 de julio, 7 de agosto y 4 de septiembre de 2026.
+
+La página se desarrolló como parte de un proyecto académico,
+utilizando la plantilla ZeroFour de HTML5 UP y personalizando
+su contenido, diseño, navegación y componentes interactivos.
+Se incorporaron fotografías, videos, información del evento,
+un mapa de ubicación y enlaces institucionales.
 
 ### 1.2. Organización del contenido
 
@@ -28,10 +40,10 @@ interactiva y adaptable a diferentes dispositivos.
 | Inicio | Presentar la identidad del evento. | Logotipo, fotografía del Cerro del Carmen y presentación general. |
 | Sobre el evento | Explicar el propósito cultural. | Contexto, fotografía real, información y animación de texto al desplazarse. |
 | Programación artística | Presentar a los participantes. | Coro ESPOL, Grupo de Teatro ESPOL y Elena Erazo, con fotografías y descripciones. |
-| Galería | Mostrar los momentos del evento. | Galería interactiva de fotografías y Reel de Instagram. |
+| Galería | Mostrar los momentos del evento. | Videoteca de tres presentaciones del 2 de octubre, archivo fotográfico de julio, agosto y septiembre, y Reel promocional de Instagram |
 | Información | Comunicar los datos prácticos. | Fecha, hora anunciada, acceso libre y sede, con efecto de profundidad. |
 | Ubicación | Identificar el espacio del encuentro. | Aula Magna, referencia de dirección, mapa de Google y enlace para consultar la ubicación. |
-| Contacto y redes | Facilitar el acceso a canales institucionales. | Enlaces a Instagram, Facebook y ESPOL Cultural. |
+| Contacto y redes | Facilitar el acceso a canales institucionales. | Canales institucionales, navegación inferior y formulario de contacto demostrativo |
 
 La estructura implementada responde a los objetivos del
 proyecto y permite actualizar posteriormente las fotografías
@@ -146,20 +158,19 @@ La estructura definitiva dependerá de la organización de ZeroFour y de la info
 
 La estructura debe conservar los archivos y las carpetas necesarios de la plantilla original. Una organización de referencia es:
 
-```text
+```
 landing-page-arte-en-el-cerro/
-├── README.md
 ├── index.html
+├── README.md
 ├── LICENSE.txt
-├── left-sidebar.html
-├── no-sidebar.html
-├── right-sidebar.html
 ├── docs/
+│   └── Reporte-landing-page.docx
 ├── assets/
 │   ├── css/
 │   ├── js/
 │   └── webfonts/
-└── images/
+├── images/
+└── videos/
 ```
 
 Los nombres y las rutas definitivas deben coincidir con los archivos reales del proyecto para evitar errores al cargar estilos, scripts, fuentes e imágenes.
@@ -215,12 +226,17 @@ Entre las principales personalizaciones se encuentran:
   de los tres participantes con fotografías, títulos
   y descripciones.
 
-- **Galería fotográfica:** paneles expandibles tipo
-  Accordion que responden al mouse, teclado y toque.
+- **Galería audiovisual:** reproductor de video HTML5
+  con selector interactivo para consultar las
+  presentaciones del Coro ESPOL, Grupo de Teatro ESPOL
+  y Elena Erazo en la edición del 2 de octubre.
 
-- **Contenido audiovisual:** integración de una
-  publicación de Instagram mediante el reproductor
-  oficial de la plataforma.
+- **Archivo fotográfico:** selector de fechas que permite
+  consultar tres fotografías de cada encuentro anterior:
+  21 de julio, 7 de agosto y 4 de septiembre de 2026.
+
+- **Contenido en redes:** inserción de un Reel promocional
+  mediante el reproductor oficial de Instagram.
 
 - **Información del evento:** composición con fecha
   destacada y efecto de profundidad interactivo.
@@ -228,8 +244,10 @@ Entre las principales personalizaciones se encuentran:
 - **Ubicación:** integración de Google Maps y
   elementos decorativos inspirados en líneas topográficas.
 
-- **Contacto y redes:** enlaces institucionales con
-  transiciones visuales y navegación de pie de página.
+- **Contacto y redes sociales:** enlaces a canales
+  institucionales, navegación inferior y formulario
+  demostrativo con campos de nombre, correo y mensaje.
+  El formulario no envía ni almacena información.
 
 Las interacciones personalizadas se desarrollaron con
 HTML, CSS y JavaScript, sin necesidad de migrar el
@@ -278,6 +296,14 @@ HTML5 UP. (s. f.). *Prologue*. https://html5up.net/prologue
 HTML5 UP. (s. f.). *Responsive HTML5 and CSS3 site templates*. https://html5up.net/
 
 GitHub Docs. (s. f.). *GitHub Pages*. https://docs.github.com/en/pages
+
+Escuela Superior Politécnica del Litoral. (2026).
+*ESPOL y Segura EP llevan la cultura y espacios
+de encuentro al Cerro del Carmen*.
+https://www.espol.edu.ec/enunminuto/julio-2026
+
+ESPOL. (s. f.). *Distrito 100*.
+https://www.d100.espol.edu.ec/
 
 **Nota:** conservar la atribución de HTML5 UP y revisar el archivo de licencia incluido con la plantilla ZeroFour para cumplir sus condiciones de uso.
 

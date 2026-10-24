@@ -130,24 +130,34 @@
                                     </em>
                             </h2>
                             <p class="about-lead">
-                                Arte en el Cerro reunió música,
-                                teatro y comunidad en una jornada
-                                para compartir el talento artístico
-                                de ESPOL.
+                                Arte en el Cerro es una iniciativa cultural
+                                impulsada por ESPOL junto con Segura EP
+                                y la comunidad del Cerro del Carmen,
+                                que promueve el encuentro a través
+                                del arte y la cultura.
                             </p>
                             <p>
-                                La edición del
-                                <strong>2 de octubre de 2026</strong>
-                                contó con el Coro ESPOL,
+                                El proyecto inició el 21 de julio de 2026
+                                y contempla presentaciones artísticas
+                                el primer viernes de cada mes,
+                                a las 17:00.
+                            </p>
+                            <p>
+                                Esta página documenta especialmente
+                                la edición del <strong>2 de octubre de 2026</strong>,
+                                que contó con el Coro ESPOL,
                                 el Grupo de Teatro ESPOL
-                                y la participación especial
-                                de Elena Erazo.
+                                y la participación especial de Elena Erazo.
                             </p>
                             <p>
-                                Debido a la lluvia, el encuentro
-                                se trasladó al Aula Magna
-                                del Campus Las Peñas, donde
-                                se desarrolló la actividad cultural.
+                                Debido a la lluvia, esa jornada
+                                se trasladó al Aula Magna de
+                                ESPOL Campus Las Peñas,
+                                en Guayaquil.
+                            </p>
+                            <p class="about-purpose">
+                                EL ARTE COMO HERRAMIENTA
+                                DE TRANSFORMACIÓN SOCIAL.
                             </p>
                             <div class="about-facts">
                                 <span>02 / OCT / 2026</span>
@@ -313,73 +323,217 @@
                             ✦ RECUERDOS DEL 02 DE OCTUBRE
                         </p>
                         <h2 id="titulo-galeria">
-                            El arte en <em>imágenes.</em>
+                            El arte en <em>movimiento.</em>
                         </h2>
                         <p>
-                            Tres miradas a una jornada de música,
-                            teatro y comunidad en el Aula Magna
-                            de ESPOL.
+                            Revive las presentaciones de la edición
+                            del 2 de octubre de 2026 y descubre
+                            los encuentros que dieron continuidad
+                            a esta iniciativa cultural.
                         </p>
                     </header>
-                    <div class="galeria-accordion"
-                        role="group"
-                        aria-label="Fotografías de Arte en el Cerro">
-                        <!-- Coro ESPOL -->
-                        <button type="button"
-                                class="galeria-panel is-active"
-                                aria-pressed="true">
-                            <img src="images/coro-espol.jpeg"
-                                alt="Presentación del Coro ESPOL"
-                                loading="lazy">
-                            <span class="galeria-panel-text">
-                                <span class="galeria-panel-index">
-                                    01 / MÚSICA CORAL
+                    <!-- Presentaciones audiovisuales: 2 de octubre -->
+                    <section class="galeria-video"
+                            aria-labelledby="titulo-videos">
+                        <!-- Reproductor principal -->
+                        <div class="video-principal">
+                            <p class="video-etiqueta">
+                                ✦ EDICIÓN DEL 02 DE OCTUBRE DE 2026
+                            </p>
+                            <h3 id="titulo-videos">
+                                Revive el <em>escenario.</em>
+                            </h3>
+                            <div class="video-marco">
+                                <video id="reproductor-octubre"
+                                    controls
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Presentación del Coro ESPOL">
+                                    <source
+                                        src="videos/2octubre-coro.mp4"
+                                        type="video/mp4">
+                                    Tu navegador no permite reproducir
+                                    este video.
+                                </video>
+                            </div>
+                            <div class="video-informacion">
+                                <p class="video-actual">
+                                    PRESENTACIÓN SELECCIONADA
+                                </p>
+                                <h4 id="video-titulo">
+                                    Coro ESPOL
+                                </h4>
+                                <p id="video-descripcion">
+                                    Registro audiovisual de su participación
+                                    en Arte en el Cerro.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Selector de presentaciones -->
+                        <div class="video-selector">
+                            <p class="video-selector-etiqueta">
+                                EXPLORA LAS PRESENTACIONES
+                            </p>
+                            <button type="button"
+                                    class="video-opcion is-active"
+                                    aria-pressed="true"
+                                    data-video-src="videos/2octubre-coro.mp4"
+                                    data-video-titulo="Coro ESPOL"
+                                    data-video-descripcion="Registro audiovisual de su participación en Arte en el Cerro.">
+                                <span class="video-numero">01</span>
+                                <span class="video-opcion-texto">
+                                    <strong>Coro ESPOL</strong>
+                                    <small>Música coral</small>
                                 </span>
-                                <strong>Coro ESPOL</strong>
-                                <span class="galeria-panel-description">
-                                    Voces que unen a la comunidad.
+                                <span class="video-flecha"
+                                    aria-hidden="true">↗</span>
+                            </button>
+                            <button type="button"
+                                    class="video-opcion"
+                                    aria-pressed="false"
+                                    data-video-src="videos/2octubre-teatro.mp4"
+                                    data-video-titulo="Grupo de Teatro ESPOL"
+                                    data-video-descripcion="Registro audiovisual de su presentación artística en el Aula Magna.">
+                                <span class="video-numero">02</span>
+                                <span class="video-opcion-texto">
+                                    <strong>Grupo de Teatro ESPOL</strong>
+                                    <small>Artes escénicas</small>
                                 </span>
-                            </span>
-                        </button>
-                        <!-- Teatro ESPOL -->
-                        <button type="button"
-                                class="galeria-panel"
-                                aria-pressed="false">
-                            <img src="images/teatro-espol.jpeg"
-                                alt="Presentación del Grupo de Teatro ESPOL"
-                                loading="lazy">
-                            <span class="galeria-panel-text">
-                                <span class="galeria-panel-index">
-                                    02 / ARTES ESCÉNICAS
+                                <span class="video-flecha"
+                                    aria-hidden="true">↗</span>
+                            </button>
+                            <button type="button"
+                                    class="video-opcion"
+                                    aria-pressed="false"
+                                    data-video-src="videos/2octubre-elena.mp4"
+                                    data-video-titulo="Elena Erazo"
+                                    data-video-descripcion="Registro audiovisual de la participación de la invitada especial.">
+                                <span class="video-numero">03</span>
+                                <span class="video-opcion-texto">
+                                    <strong>Elena Erazo</strong>
+                                    <small>Invitada especial</small>
                                 </span>
-                                <strong>Grupo de Teatro ESPOL</strong>
-                                <span class="galeria-panel-description">
-                                    Historias compartidas en escena.
-                                </span>
-                            </span>
-                        </button>
-                        <!-- Elena Erazo -->
-                        <button type="button"
-                                class="galeria-panel"
-                                aria-pressed="false">
-                            <img src="images/elena-erazo.jpeg"
-                                alt="Participación especial de Elena Erazo"
-                                loading="lazy">
-                            <span class="galeria-panel-text">
-                                <span class="galeria-panel-index">
-                                    03 / INVITADA ESPECIAL
-                                </span>
-                                <strong>Elena Erazo</strong>
-                                <span class="galeria-panel-description">
-                                    Una participación especial.
-                                </span>
-                            </span>
-                        </button>
-                    </div>
-                    <p class="galeria-ayuda">
-                        Selecciona una fotografía para descubrir
-                        cada momento del evento.
-                    </p>
+                                <span class="video-flecha"
+                                    aria-hidden="true">↗</span>
+                            </button>
+                            <p class="video-nota">
+                                Selecciona una presentación y utiliza
+                                los controles del reproductor para verla.
+                            </p>
+                        </div>
+                    </section>      
+                    <!-- Archivo fotográfico de ediciones anteriores -->
+                    <section class="archivo-ediciones"
+                            aria-labelledby="titulo-archivo">
+                        <header class="archivo-heading">
+                            <p class="archivo-eyebrow">
+                                ✦ UNA HISTORIA QUE CONTINÚA
+                            </p>
+                            <h3 id="titulo-archivo">
+                                Un proyecto, <em>diferentes encuentros.</em>
+                            </h3>
+                            <p>
+                                Antes de la jornada del 2 de octubre,
+                                Arte en el Cerro ya había reunido
+                                a artistas y comunidad en distintos encuentros.
+                                Explora las fotografías de las fechas anteriores.
+                            </p>
+                        </header>
+                        <div class="archivo-selector">
+                            <!-- Controles para elegir la fecha -->
+                            <input type="radio"
+                                name="archivo-fecha"
+                                id="archivo-julio"
+                                checked>
+                            <input type="radio"
+                                name="archivo-fecha"
+                                id="archivo-agosto">
+                            <input type="radio"
+                                name="archivo-fecha"
+                                id="archivo-septiembre">
+                            <div class="archivo-fechas"
+                                role="group"
+                                aria-label="Seleccionar fecha del archivo">
+                                <label for="archivo-julio">
+                                    21 JUL <span>2026</span>
+                                </label>
+                                <label for="archivo-agosto">
+                                    07 AGO <span>2026</span>
+                                </label>
+                                <label for="archivo-septiembre">
+                                    04 SEP <span>2026</span>
+                                </label>
+                            </div>
+                            <div class="archivo-contenidos">
+                                <!-- 21 de julio -->
+                                <div class="archivo-panel" id="panel-julio">
+                                    <h4>21 de julio de 2026</h4>
+                                    <p>El inicio de Arte en el Cerro.</p>
+                                    <div class="archivo-fotos">
+                                        <figure>
+                                            <img src="images/21julio-1.jpg"
+                                                alt="Presentación artística del encuentro del 21 de julio"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/21julio-2.jpg"
+                                                alt="Artistas durante la jornada del 21 de julio"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/21julio-3.jpg"
+                                                alt="Presentación de danza en el encuentro del 21 de julio"
+                                                loading="lazy">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- 7 de agosto -->
+                                <div class="archivo-panel" id="panel-agosto">
+                                    <h4>7 de agosto de 2026</h4>
+                                    <p>Una nueva jornada de expresión cultural.</p>
+                                    <div class="archivo-fotos">
+                                        <figure>
+                                            <img src="images/7agosto-1.jpg"
+                                                alt="Presentación artística nocturna del 7 de agosto"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/7agosto-2.jpg"
+                                                alt="Participantes de la jornada cultural del 7 de agosto"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/7agosto-3.jpg"
+                                                alt="Presentación de danza de la edición de agosto"
+                                                loading="lazy">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- 4 de septiembre -->
+                                <div class="archivo-panel" id="panel-septiembre">
+                                    <h4>4 de septiembre de 2026</h4>
+                                    <p>El arte volvió a reunir a la comunidad.</p>
+                                    <div class="archivo-fotos">
+                                        <figure>
+                                            <img src="images/4septiembre-1.jpg"
+                                                alt="Artistas y público durante el encuentro de septiembre"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/4septiembre-2.jpg"
+                                                alt="Vista del entorno de la jornada del 4 de septiembre"
+                                                loading="lazy">
+                                        </figure>
+                                        <figure>
+                                            <img src="images/4septiembre-3.jpg"
+                                                alt="Asistentes reunidos en la edición de septiembre"
+                                                loading="lazy">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <!-- Reel promocional de Instagram -->
                     <section class="reel-destacado"
                             aria-labelledby="titulo-reel">
@@ -648,6 +802,71 @@
                     </a>
                 </section>
             </div>
+            <!-- Formulario de contacto demostrativo -->
+            <section class="footer-form-section"
+                    aria-labelledby="titulo-formulario">
+                <div class="footer-form-heading">
+                    <p class="footer-form-eyebrow">
+                        ✦ DEJA TU MENSAJE
+                    </p>
+                    <h3 id="titulo-formulario">
+                        ¿Tienes alguna <em>consulta?</em>
+                    </h3>
+                    <p>
+                        Un espacio para compartir tus comentarios
+                        sobre Arte en el Cerro.
+                    </p>
+                </div>
+                <form class="footer-form"
+                    aria-describedby="aviso-formulario">
+                    <div class="footer-form-row">
+                        <div class="footer-form-field">
+                            <label for="contacto-nombre">
+                                Nombre
+                            </label>
+                            <input
+                                type="text"
+                                id="contacto-nombre"
+                                name="nombre"
+                                placeholder="Tu nombre"
+                                autocomplete="name">
+                        </div>
+                        <div class="footer-form-field">
+                            <label for="contacto-correo">
+                                Correo electrónico
+                            </label>
+                            <input
+                                type="email"
+                                id="contacto-correo"
+                                name="correo"
+                                placeholder="ejemplo@correo.com"
+                                autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="footer-form-field">
+                        <label for="contacto-mensaje">
+                            Mensaje
+                        </label>
+                        <textarea
+                            id="contacto-mensaje"
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Escribe aquí tu mensaje..."></textarea>
+                    </div>
+                    <div class="footer-form-bottom">
+                        <p id="aviso-formulario">
+                            Formulario de demostración académica.
+                            Los datos no se envían ni se almacenan.
+                        </p>
+                        <button type="button"
+                                class="footer-form-button"
+                                aria-describedby="aviso-formulario">
+                            Enviar mensaje
+                            <span aria-hidden="true">↗</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
             <!-- Cierre y créditos -->
             <div id="copyright" class="footer-bottom">
                 <div class="footer-credits">
@@ -683,7 +902,7 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/hero-interactivo.js"></script>
-<script src="assets/js/galeria.js"></script>
+<script src="assets/js/videos-galeria.js"></script>
 <script src="assets/js/informacion-interactiva.js"></script>
 <script src="assets/js/focus-text.js"></script>
 <!-- Reproductor de Instagram -->
